@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="google-site-verification" content="ACohENPwU4Lrv7CEIzlKL-EJMp6wIML1-RQAYwL2YqA">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Damion:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="html5,前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="DTD文档类型定义可定义合法的XML文档构建模块，它使用一系列合法的元素来定义文档的机构。在HTML中DTD规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5不基于SGML，所以不需要引用DTD 。就是说HTML5并不是定义为SGML或者XML的也能够用程序，HTML5的DTD声明中不需要使用DTD文件。">
+<meta name="keywords" content="html5,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5笔记">
+<meta property="og:url" content="https://am1874.top/2017/07/15/h5/index.html">
+<meta property="og:site_name" content="Fog&#39;s Blog">
+<meta property="og:description" content="DTD文档类型定义可定义合法的XML文档构建模块，它使用一系列合法的元素来定义文档的机构。在HTML中DTD规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5不基于SGML，所以不需要引用DTD 。就是说HTML5并不是定义为SGML或者XML的也能够用程序，HTML5的DTD声明中不需要使用DTD文件。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-04-16T10:11:51.219Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5笔记">
+<meta name="twitter:description" content="DTD文档类型定义可定义合法的XML文档构建模块，它使用一系列合法的元素来定义文档的机构。在HTML中DTD规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5不基于SGML，所以不需要引用DTD 。就是说HTML5并不是定义为SGML或者XML的也能够用程序，HTML5的DTD声明中不需要使用DTD文件。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: 'bd8000464a05450876481dc69b18e101',
+      indexName: 'Mycontent',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://am1874.top/2017/07/15/h5/">
+
+
+
+
+
+  <title>HTML5笔记 | Fog's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fog's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">step by step</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://am1874.top/2017/07/15/h5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fog">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://i.loli.net/2020/04/14/jNzwAtbVuhgMdJ1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fog's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML5笔记</h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T15:54:05+08:00">
+                2017-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/15/h5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/07/15/h5/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/07/15/h5/" class="leancloud_visitors" data-flag-title="HTML5笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="\assets\js\APlayer.min.js"> </script><p><strong>DTD文档类型定义</strong><br>可定义合法的XML文档构建模块，它使用一系列合法的元素来定义文档的机构。在HTML中DTD规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5不基于SGML，所以不需要引用DTD 。就是说HTML5并不是定义为SGML或者XML的也能够用程序，HTML5的DTD声明中不需要使用DTD文件。<br><a id="more"></a></p>
+<h3 id="新增标签"><a href="#新增标签" class="headerlink" title="新增标签"></a>新增标签</h3><h4 id="结构标签（块状元素）"><a href="#结构标签（块状元素）" class="headerlink" title="结构标签（块状元素）"></a>结构标签（块状元素）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;article&gt;标记定义一篇文章&lt;/article&gt;</span><br><span class="line">&lt;header&gt;标记定义额一个网页或一个区域的头部&lt;/header&gt;</span><br><span class="line">&lt;nav&gt;标记定义导航链接&lt;/nav&gt;</span><br><span class="line">&lt;section&gt;标记定义一个区域&lt;/section&gt;</span><br><span class="line">&lt;aside&gt;标记定义页面内容部分的侧边栏&lt;/aside&gt;</span><br><span class="line">&lt;hgroup&gt;标记定义文件中的一个区块的相关信息&lt;/hgroup&gt;</span><br><span class="line">&lt;figure&gt;标记定义一组媒体内容以及它们的标题&lt;/figure&gt;</span><br><span class="line">&lt;figcaption&gt;标记定义figure元素的标题&lt;/figcaption&gt;</span><br><span class="line">&lt;footer&gt;标记定义一个页面或一个区域的底部&lt;/footer&gt;</span><br><span class="line">&lt;dialog&gt;标记定义一个对话框/绘画课类似微信</span><br></pre></td></tr></table></figure>
+<font color="orange">注意点：</font>
+
+<ul>
+<li>header/section/aside/article/footer不能自嵌套；      </li>
+<li>header/section/footer  &gt;  aside/article/figure/hgroup/nav  &gt;  div / figcaption; 就是一层一层嵌套，级别低的在级别高的里面，header/section/footer级别最高，适合做最外面的盒子</li>
+<li>section通常不推荐没有标题内容使用section元素,<br>不要将section元素作为设置样式的页面容器，那是div的功能<br>如果article元素、aside元素、nav元素更符合使用条件，那不要用section</li>
+<li>不能使用menu元素代替nav元素</li>
+</ul>
+<h4 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;&quot;&gt;标记定义一个视频&lt;/video&gt;</span><br><span class="line">&lt;audio src=&quot;&quot;&gt;标记定义音频内容&lt;/audio&gt;</span><br><span class="line">&lt;source&gt;标记定义媒体资源</span><br><span class="line">&lt;canvas&gt;标记定义图片&lt;/canvas&gt;</span><br><span class="line">&lt;embed src=&quot;&quot; type=&quot;&quot;&gt;标记定义外部的可交互的内容或插件，比如flash</span><br></pre></td></tr></table></figure>
+<h4 id="web应用标签"><a href="#web应用标签" class="headerlink" title="web应用标签"></a>web应用标签</h4><ul>
+<li><p>状态标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meter&gt;状态标签(实时状态显示：气压、气温)C、O&lt;/meter&gt;</span><br><span class="line">&lt;progress&gt;状态标签(任务过程：安装、加载)C、O、F&lt;/progress&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;datalist&gt;为input标签定义一个下拉列表，配合option  F、O&lt;/datalist&gt;</span><br><span class="line">&lt;details&gt;标记定义一个元素的详细内容，配合summary  C&lt;/details&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Menu:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;menu&gt;命令列表（目前所有主流浏览器都不支持）&lt;/menu&gt;</span><br><span class="line">&lt;menuitem&gt;menu命令列表标签（只有firfox8+支持）</span><br><span class="line">&lt;command&gt;menu标记定义一个命令按钮 只有IE9支持</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h4><ul>
+<li>注释标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ruby&gt;标记定义注释或音标&lt;/ruby&gt;</span><br><span class="line">&lt;rt&gt;标记定义对ruby的注释内容文本&lt;/rt&gt;</span><br><span class="line">&lt;rp&gt;告诉某些不支持ruby元素的浏览器如何去显示&lt;/rp&gt;</span><br><span class="line">&lt;mark&gt;标记定义有标记的文本（黄色选中状态）&lt;/mark&gt;</span><br><span class="line">&lt;output&gt;标记定义一些输出类型，计算表单结果配合oninput事件（该事件可以实时监听文本框的输入变化）&lt;/output&gt;</span><br><span class="line">&lt;keygen&gt;标记定义表单里一个生成的键值（加密信息传送）</span><br><span class="line">&lt;time&gt;标记定义一个日期/时间，目前所有主流浏览器都不支持&lt;/time&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="删除的标签"><a href="#删除的标签" class="headerlink" title="删除的标签"></a>删除的标签</h3><ul>
+<li>纯表现的元素（能使用css替代的元素）<br>Basefont big center font s strike tt u</li>
+<li>对可用性产生负面影响的元素<br>frame frameset noframes  (可用iframe)</li>
+<li>产生混淆的元素<br>acronym 首字母的缩小 applet isindex dir</li>
+</ul>
+<h3 id="重定义标签"><a href="#重定义标签" class="headerlink" title="重定义标签"></a>重定义标签</h3><p>显示不变，只是表达的含义进行了重新定义的标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;b&gt;代表内联文本，通常是粗体，没有传递表示重要的意思&lt;/b&gt;</span><br><span class="line">&lt;i&gt;代表内联文本，通常是斜体，没有传递表示重要的意思&lt;/i&gt;</span><br><span class="line">&lt;dd&gt;可以同details与figure一同使用，定义包含文本，dialog也可用&lt;/dd&gt;</span><br><span class="line">&lt;dt&gt;可以同details与figure一同使用，汇总细节，dialog也可用&lt;/dt&gt;</span><br><span class="line">&lt;hr&gt;表示主题结束而不是水平线，虽然显示相同</span><br><span class="line">&lt;menu&gt;重新定义用户界面的菜单，配合commond或者menuitem使用&lt;/menu&gt;</span><br><span class="line">&lt;small&gt;表示小字体，例如打印注释或者法律条款&lt;/small&gt;</span><br><span class="line">&lt;strong&gt;表示重要性而不是强调符号&lt;/strong&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="新增的属性"><a href="#新增的属性" class="headerlink" title="新增的属性"></a>新增的属性</h3><ul>
+<li>input属性:email/url/number/range/date picker/search/color/tel<ul>
+<li>date picker Input类型：<ul>
+<li>date选取日、月、年</li>
+<li>month选取月、年</li>
+<li>week选取周和年</li>
+<li>time 选取时间（小时和分钟）</li>
+<li>datetime选取时间、日、月、年UTC时间  ie火狐chrome不兼容，</li>
+<li>datetime-local选取时间、日、月、年（本地时间） ie火狐不兼容，</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>表单属性：autocomplete/autofocus/multiple/placeholder/required<ul>
+<li><code>autocomplete=&quot;on&quot;</code></li>
+<li>autofocus属性该控件自动获得光标焦点,适用于所有input标签的类型 或按钮控件上，<code>autofocus=&quot;autofocus&quot;</code></li>
+<li>multiple 适合input下的email和file</li>
+<li>placeholder输入框没输入状态下显示的文字，输入后消失，适用于input标签type属性为text,search,url,telephone.email,password</li>
+<li>required属性规定必须在提交之前填写输入域不能为空<code>&lt;input type=&quot;text&quot; required=&quot;required&quot; name=&quot;&quot;&gt;</code>适用于input标签type属性为text,search,url,telephone.email,password,date pickers,number,checkbox,radio,file</li>
+</ul>
+</li>
+<li>链接属性：link的sizes属性/base的target属性/超链接a<ul>
+<li><code>&lt;link rel=&quot;icon&quot; type=&quot;image/gif&quot; href=&quot;icon.gif&quot; sizes=&quot;16*16&quot;&gt;</code></li>
+<li><code>&lt;base href=&quot;http://localhost/&quot;  target=&quot;_blank&quot;&gt;</code> base标签为页面上的所有链接规定默认地址或默认目标。写在head标签中</li>
+<li>超链接a<ul>
+<li>a:media=”handhelp”即支持手持设备，tv为电视设备</li>
+<li>a:hreflang=”zh”设置中文语言</li>
+<li>a:rel=”external”设置超链接的引用，这里为外部链接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其他属性：script/html/style<ul>
+<li>script<ul>
+<li>defer:加载完脚本后并不执行而是等整个页面加载完之后再执行 <code>&lt;script defer scr=&quot;url&quot;&gt;&lt;/script&gt;</code></li>
+<li>async:加载完脚本后立刻执行，不用等整个页面都加载完，属于异步执行</li>
+</ul>
+</li>
+<li><code>&lt;html manifest=&quot;cache.manifest&quot;&gt;</code>定义页面离线应用文件</li>
+<li><code>&lt;style scoped&gt;&lt;/style&gt;</code> scoped内嵌css。可以在任意地方写</li>
+<li>ol有序列表:start–起始值 reversed——倒序排列<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol start=&quot;5&quot; reversed=&quot;reversed&quot;&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="全局属性：对任何元素都可以使用的元素"><a href="#全局属性：对任何元素都可以使用的元素" class="headerlink" title="全局属性：对任何元素都可以使用的元素"></a>全局属性：对任何元素都可以使用的元素</h4><ul>
+<li>contentEditable:true可编辑</li>
+<li>designMode：页面是否可编辑，若设置可编辑， contentEditable都能编辑</li>
+<li>hidden</li>
+<li>spellcheck：对input或textarea检查</li>
+<li>tabindex：按tab可定位</li>
+</ul>
+<h3 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h3><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
+<li>form action 属性可提交到不同页面。</li>
+<li>form method 指定不同的提交方式post/get</li>
+<li>form enctype指定不同编码方式。 text/plain   空格转换为 “+” 加号，但不对特殊字符编码。multipart/form-data<br>不对字符编码。在使用包含文件上传控件的表单时，必须使用该值。application/x-www-form-urlencoded在发送前编码所有字符（默认）</li>
+<li>form target:分别指定在任何处打开表单提交所需加载的页面 _blank 新窗口 _self  _parent _top当前窗口  framename 指定框架打开</li>
+<li>autofocus：为文本框选择框或按钮控件上加上该属性，当画面打开时，</li>
+<li>required：输入框为空白时，提交会提示</li>
+<li>labels标签的control属性：在标签内部放置一个表单元素，</li>
+<li>placeholder：指文本框处于未输入状态时显示的输入提示。</li>
+<li>list 属性为某个datalist元素的id，datalist类似选择框，当用户想要设定的值不在选择列表之内时，允许自行输入</li>
+<li><p>input元素使用pattern属性，值设为某个格式的正则表达式。提交时针对这些进行检查，是否符合给定格式</p>
+</li>
+<li><p>selectiondirection属性，当用户用鼠标选取部分文字时，正向为forward，反向为backward，没有选取任何文字时，属性为forward</p>
+</li>
+<li>indeterminate：对于复选框checkbox元素来说，过去只是选取与非选取这两种状态。在HTML5中，可以在JavaScript脚本代码中对该元素使用indeterminate属性，以说明复选框处于“尚未明确是否选取”状态。</li>
+</ul>
+<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><ul>
+<li>tt等宽的西方字体</li>
+<li>del：删字</li>
+<li>ins：新增字</li>
+<li>s：这些内容不被提倡使用的</li>
+<li>sup上标</li>
+<li>sub下标</li>
+<li>mark:高亮</li>
+<li>em:强调（斜）</li>
+<li>strong:着重 加粗 不同浏览器显示不同</li>
+<li>dfn 定义</li>
+<li>code 代码</li>
+<li>samp 例子代码</li>
+<li>kbd 用户输入</li>
+<li>var 变量</li>
+<li>cite 引用</li>
+<li>address：多行 可被浏览器识别</li>
+<li>blockquote ：缩进</li>
+<li>q：引用</li>
+<li>pre:不做内容格式化</li>
+<li>hr 水平线 没有结束标记</li>
+<li>abbr ：缩写注释 <code>&lt;abbr title=&quot;中华人民共和国&quot;&gt;PRC&lt;/abbr&gt;</code></li>
+<li><code>&lt;bdo dir=rtl&gt; 方向从右到左&lt;bdi&gt;</code> 正回来</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-child"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html5/" rel="tag"><i class="fa fa-tag"></i> html5</a>
+          
+            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/15/git/" rel="next" title="Git学习">
+                <i class="fa fa-chevron-left"></i> Git学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2020/04/14/jNzwAtbVuhgMdJ1.jpg" alt="Fog">
+            
+              <p class="site-author-name" itemprop="name">Fog</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Yuhaha" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/buzhihehe" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/da-yu-x" target="_blank" title="ZhiHu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>ZhiHu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:am1874@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+         
+         
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#新增标签"><span class="nav-number">1.</span> <span class="nav-text">新增标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#结构标签（块状元素）"><span class="nav-number">1.1.</span> <span class="nav-text">结构标签（块状元素）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多媒体标签"><span class="nav-number">1.2.</span> <span class="nav-text">多媒体标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web应用标签"><span class="nav-number">1.3.</span> <span class="nav-text">web应用标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他标签"><span class="nav-number">1.4.</span> <span class="nav-text">其他标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除的标签"><span class="nav-number">2.</span> <span class="nav-text">删除的标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重定义标签"><span class="nav-number">3.</span> <span class="nav-text">重定义标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新增的属性"><span class="nav-number">4.</span> <span class="nav-text">新增的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局属性：对任何元素都可以使用的元素"><span class="nav-number">4.1.</span> <span class="nav-text">全局属性：对任何元素都可以使用的元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复习"><span class="nav-number">5.</span> <span class="nav-text">复习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性"><span class="nav-number">5.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签"><span class="nav-number">5.2.</span> <span class="nav-text">标签</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love"> 
+    <i class="fa fa-pagelines"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fog</span>
+  <br>
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+  
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user"></i>&nbsp;
+<span id="busuanzi_container_site_uv">
+   <span id="busuanzi_value_site_uv"></span>
+</span>&nbsp;
+<span class="post-meta-divider">|</span>&nbsp;
+<i class="fa fa-eye"></i>&nbsp;
+<span id="busuanzi_container_site_pv">
+    <span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+
+
+  <!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div> 
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'Yuhaha',
+            repo: 'gitment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '0e1db7ba1fd6ab0831211af2fd49bfb2a847fca4',
+            
+                client_id: '8b97f826c3bc07f66ca5'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
+
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'Yuhaha',
+            repo: 'gitment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '0e1db7ba1fd6ab0831211af2fd49bfb2a847fca4',
+            
+                client_id: '8b97f826c3bc07f66ca5'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("J5BPhG046BtpFMnlsstWuoLS-gzGzoHsz", "Blhn9SJcFXTGsLzBd8AleiyW");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>

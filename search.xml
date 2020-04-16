@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[HTML5笔记]]></title>
+      <url>/2017/07/15/h5/</url>
+      <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p><strong>DTD文档类型定义</strong><br>可定义合法的XML文档构建模块，它使用一系列合法的元素来定义文档的机构。在HTML中DTD规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5不基于SGML，所以不需要引用DTD 。就是说HTML5并不是定义为SGML或者XML的也能够用程序，HTML5的DTD声明中不需要使用DTD文件。<br><a id="more"></a></p>
+<h3 id="新增标签"><a href="#新增标签" class="headerlink" title="新增标签"></a>新增标签</h3><h4 id="结构标签（块状元素）"><a href="#结构标签（块状元素）" class="headerlink" title="结构标签（块状元素）"></a>结构标签（块状元素）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;article&gt;标记定义一篇文章&lt;/article&gt;</span><br><span class="line">&lt;header&gt;标记定义额一个网页或一个区域的头部&lt;/header&gt;</span><br><span class="line">&lt;nav&gt;标记定义导航链接&lt;/nav&gt;</span><br><span class="line">&lt;section&gt;标记定义一个区域&lt;/section&gt;</span><br><span class="line">&lt;aside&gt;标记定义页面内容部分的侧边栏&lt;/aside&gt;</span><br><span class="line">&lt;hgroup&gt;标记定义文件中的一个区块的相关信息&lt;/hgroup&gt;</span><br><span class="line">&lt;figure&gt;标记定义一组媒体内容以及它们的标题&lt;/figure&gt;</span><br><span class="line">&lt;figcaption&gt;标记定义figure元素的标题&lt;/figcaption&gt;</span><br><span class="line">&lt;footer&gt;标记定义一个页面或一个区域的底部&lt;/footer&gt;</span><br><span class="line">&lt;dialog&gt;标记定义一个对话框/绘画课类似微信</span><br></pre></td></tr></table></figure>
+<font color="orange">注意点：</font>
+
+<ul>
+<li>header/section/aside/article/footer不能自嵌套；      </li>
+<li>header/section/footer  &gt;  aside/article/figure/hgroup/nav  &gt;  div / figcaption; 就是一层一层嵌套，级别低的在级别高的里面，header/section/footer级别最高，适合做最外面的盒子</li>
+<li>section通常不推荐没有标题内容使用section元素,<br>不要将section元素作为设置样式的页面容器，那是div的功能<br>如果article元素、aside元素、nav元素更符合使用条件，那不要用section</li>
+<li>不能使用menu元素代替nav元素</li>
+</ul>
+<h4 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;&quot;&gt;标记定义一个视频&lt;/video&gt;</span><br><span class="line">&lt;audio src=&quot;&quot;&gt;标记定义音频内容&lt;/audio&gt;</span><br><span class="line">&lt;source&gt;标记定义媒体资源</span><br><span class="line">&lt;canvas&gt;标记定义图片&lt;/canvas&gt;</span><br><span class="line">&lt;embed src=&quot;&quot; type=&quot;&quot;&gt;标记定义外部的可交互的内容或插件，比如flash</span><br></pre></td></tr></table></figure>
+<h4 id="web应用标签"><a href="#web应用标签" class="headerlink" title="web应用标签"></a>web应用标签</h4><ul>
+<li><p>状态标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meter&gt;状态标签(实时状态显示：气压、气温)C、O&lt;/meter&gt;</span><br><span class="line">&lt;progress&gt;状态标签(任务过程：安装、加载)C、O、F&lt;/progress&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;datalist&gt;为input标签定义一个下拉列表，配合option  F、O&lt;/datalist&gt;</span><br><span class="line">&lt;details&gt;标记定义一个元素的详细内容，配合summary  C&lt;/details&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Menu:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;menu&gt;命令列表（目前所有主流浏览器都不支持）&lt;/menu&gt;</span><br><span class="line">&lt;menuitem&gt;menu命令列表标签（只有firfox8+支持）</span><br><span class="line">&lt;command&gt;menu标记定义一个命令按钮 只有IE9支持</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h4><ul>
+<li>注释标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ruby&gt;标记定义注释或音标&lt;/ruby&gt;</span><br><span class="line">&lt;rt&gt;标记定义对ruby的注释内容文本&lt;/rt&gt;</span><br><span class="line">&lt;rp&gt;告诉某些不支持ruby元素的浏览器如何去显示&lt;/rp&gt;</span><br><span class="line">&lt;mark&gt;标记定义有标记的文本（黄色选中状态）&lt;/mark&gt;</span><br><span class="line">&lt;output&gt;标记定义一些输出类型，计算表单结果配合oninput事件（该事件可以实时监听文本框的输入变化）&lt;/output&gt;</span><br><span class="line">&lt;keygen&gt;标记定义表单里一个生成的键值（加密信息传送）</span><br><span class="line">&lt;time&gt;标记定义一个日期/时间，目前所有主流浏览器都不支持&lt;/time&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="删除的标签"><a href="#删除的标签" class="headerlink" title="删除的标签"></a>删除的标签</h3><ul>
+<li>纯表现的元素（能使用css替代的元素）<br>Basefont big center font s strike tt u</li>
+<li>对可用性产生负面影响的元素<br>frame frameset noframes  (可用iframe)</li>
+<li>产生混淆的元素<br>acronym 首字母的缩小 applet isindex dir</li>
+</ul>
+<h3 id="重定义标签"><a href="#重定义标签" class="headerlink" title="重定义标签"></a>重定义标签</h3><p>显示不变，只是表达的含义进行了重新定义的标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;b&gt;代表内联文本，通常是粗体，没有传递表示重要的意思&lt;/b&gt;</span><br><span class="line">&lt;i&gt;代表内联文本，通常是斜体，没有传递表示重要的意思&lt;/i&gt;</span><br><span class="line">&lt;dd&gt;可以同details与figure一同使用，定义包含文本，dialog也可用&lt;/dd&gt;</span><br><span class="line">&lt;dt&gt;可以同details与figure一同使用，汇总细节，dialog也可用&lt;/dt&gt;</span><br><span class="line">&lt;hr&gt;表示主题结束而不是水平线，虽然显示相同</span><br><span class="line">&lt;menu&gt;重新定义用户界面的菜单，配合commond或者menuitem使用&lt;/menu&gt;</span><br><span class="line">&lt;small&gt;表示小字体，例如打印注释或者法律条款&lt;/small&gt;</span><br><span class="line">&lt;strong&gt;表示重要性而不是强调符号&lt;/strong&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="新增的属性"><a href="#新增的属性" class="headerlink" title="新增的属性"></a>新增的属性</h3><ul>
+<li>input属性:email/url/number/range/date picker/search/color/tel<ul>
+<li>date picker Input类型：<ul>
+<li>date选取日、月、年</li>
+<li>month选取月、年</li>
+<li>week选取周和年</li>
+<li>time 选取时间（小时和分钟）</li>
+<li>datetime选取时间、日、月、年UTC时间  ie火狐chrome不兼容，</li>
+<li>datetime-local选取时间、日、月、年（本地时间） ie火狐不兼容，</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>表单属性：autocomplete/autofocus/multiple/placeholder/required<ul>
+<li><code>autocomplete=&quot;on&quot;</code></li>
+<li>autofocus属性该控件自动获得光标焦点,适用于所有input标签的类型 或按钮控件上，<code>autofocus=&quot;autofocus&quot;</code></li>
+<li>multiple 适合input下的email和file</li>
+<li>placeholder输入框没输入状态下显示的文字，输入后消失，适用于input标签type属性为text,search,url,telephone.email,password</li>
+<li>required属性规定必须在提交之前填写输入域不能为空<code>&lt;input type=&quot;text&quot; required=&quot;required&quot; name=&quot;&quot;&gt;</code>适用于input标签type属性为text,search,url,telephone.email,password,date pickers,number,checkbox,radio,file</li>
+</ul>
+</li>
+<li>链接属性：link的sizes属性/base的target属性/超链接a<ul>
+<li><code>&lt;link rel=&quot;icon&quot; type=&quot;image/gif&quot; href=&quot;icon.gif&quot; sizes=&quot;16*16&quot;&gt;</code></li>
+<li><code>&lt;base href=&quot;http://localhost/&quot;  target=&quot;_blank&quot;&gt;</code> base标签为页面上的所有链接规定默认地址或默认目标。写在head标签中</li>
+<li>超链接a<ul>
+<li>a:media=”handhelp”即支持手持设备，tv为电视设备</li>
+<li>a:hreflang=”zh”设置中文语言</li>
+<li>a:rel=”external”设置超链接的引用，这里为外部链接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其他属性：script/html/style<ul>
+<li>script<ul>
+<li>defer:加载完脚本后并不执行而是等整个页面加载完之后再执行 <code>&lt;script defer scr=&quot;url&quot;&gt;&lt;/script&gt;</code></li>
+<li>async:加载完脚本后立刻执行，不用等整个页面都加载完，属于异步执行</li>
+</ul>
+</li>
+<li><code>&lt;html manifest=&quot;cache.manifest&quot;&gt;</code>定义页面离线应用文件</li>
+<li><code>&lt;style scoped&gt;&lt;/style&gt;</code> scoped内嵌css。可以在任意地方写</li>
+<li>ol有序列表:start–起始值 reversed——倒序排列<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol start=&quot;5&quot; reversed=&quot;reversed&quot;&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="全局属性：对任何元素都可以使用的元素"><a href="#全局属性：对任何元素都可以使用的元素" class="headerlink" title="全局属性：对任何元素都可以使用的元素"></a>全局属性：对任何元素都可以使用的元素</h4><ul>
+<li>contentEditable:true可编辑</li>
+<li>designMode：页面是否可编辑，若设置可编辑， contentEditable都能编辑</li>
+<li>hidden</li>
+<li>spellcheck：对input或textarea检查</li>
+<li>tabindex：按tab可定位</li>
+</ul>
+<h3 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h3><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
+<li>form action 属性可提交到不同页面。</li>
+<li>form method 指定不同的提交方式post/get</li>
+<li>form enctype指定不同编码方式。 text/plain   空格转换为 “+” 加号，但不对特殊字符编码。multipart/form-data<br>不对字符编码。在使用包含文件上传控件的表单时，必须使用该值。application/x-www-form-urlencoded在发送前编码所有字符（默认）</li>
+<li>form target:分别指定在任何处打开表单提交所需加载的页面 _blank 新窗口 _self  _parent _top当前窗口  framename 指定框架打开</li>
+<li>autofocus：为文本框选择框或按钮控件上加上该属性，当画面打开时，</li>
+<li>required：输入框为空白时，提交会提示</li>
+<li>labels标签的control属性：在标签内部放置一个表单元素，</li>
+<li>placeholder：指文本框处于未输入状态时显示的输入提示。</li>
+<li>list 属性为某个datalist元素的id，datalist类似选择框，当用户想要设定的值不在选择列表之内时，允许自行输入</li>
+<li><p>input元素使用pattern属性，值设为某个格式的正则表达式。提交时针对这些进行检查，是否符合给定格式</p>
+</li>
+<li><p>selectiondirection属性，当用户用鼠标选取部分文字时，正向为forward，反向为backward，没有选取任何文字时，属性为forward</p>
+</li>
+<li>indeterminate：对于复选框checkbox元素来说，过去只是选取与非选取这两种状态。在HTML5中，可以在JavaScript脚本代码中对该元素使用indeterminate属性，以说明复选框处于“尚未明确是否选取”状态。</li>
+</ul>
+<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><ul>
+<li>tt等宽的西方字体</li>
+<li>del：删字</li>
+<li>ins：新增字</li>
+<li>s：这些内容不被提倡使用的</li>
+<li>sup上标</li>
+<li>sub下标</li>
+<li>mark:高亮</li>
+<li>em:强调（斜）</li>
+<li>strong:着重 加粗 不同浏览器显示不同</li>
+<li>dfn 定义</li>
+<li>code 代码</li>
+<li>samp 例子代码</li>
+<li>kbd 用户输入</li>
+<li>var 变量</li>
+<li>cite 引用</li>
+<li>address：多行 可被浏览器识别</li>
+<li>blockquote ：缩进</li>
+<li>q：引用</li>
+<li>pre:不做内容格式化</li>
+<li>hr 水平线 没有结束标记</li>
+<li>abbr ：缩写注释 <code>&lt;abbr title=&quot;中华人民共和国&quot;&gt;PRC&lt;/abbr&gt;</code></li>
+<li><code>&lt;bdo dir=rtl&gt; 方向从右到左&lt;bdi&gt;</code> 正回来</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html5 </tag>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Git学习]]></title>
+      <url>/2017/04/15/git/</url>
+      <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p><img src="/images/git/Git-Logo-Black.png" alt="git"><br><a id="more"></a></p>
+<blockquote>
+<p>详细教程来源：<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的Git教程</a></p>
+</blockquote>
+<h3 id="安装初始化"><a href="#安装初始化" class="headerlink" title="安装初始化"></a>安装初始化</h3><ul>
+<li><code>git config --global user.name &quot;github用户名&quot;</code></li>
+<li><code>git config --global user.email &quot;邮箱&quot;</code></li>
+</ul>
+<h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><ul>
+<li><code>mkdir learngit</code>创建一个新目录</li>
+<li><code>git init</code> 初始化一个本地git仓储</li>
+</ul>
+<h3 id="添加文件及提交"><a href="#添加文件及提交" class="headerlink" title="添加文件及提交"></a>添加文件及提交</h3><ul>
+<li><code>git status</code> 查看本地仓储的变更状态</li>
+<li><code>git add .</code> /<code>git add --all</code>添加所有文件如<code>$ git add file2.txt file3.txt</code></li>
+<li><code>git add</code> 文件名 添加单个文件或多个</li>
+<li><code>.gitignore</code>文件 添加本地git 忽略清单文件 window文件新建.开头文件夹 要用命令<code>mkdir .gitignore</code>  新建文件 <code>echo &#39;&#39; &gt;&gt; .aaa</code>  或sublime新建</li>
+<li><code>git commit</code> 提交被托管的文件变化到本地仓储</li>
+</ul>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<li><code>git status</code> 查看本地仓储的变更状态</li>
+<li><code>git diff</code> 用于对比目前状态与当前版本库的区别</li>
+<li><code>git log</code> 查看提交日志，最近的一次是append GPL，上一次是add distributed，最早的一次是wrote a readme file</li>
+<li><code>git reset --hard 2d2250</code> 前六位版本强制回归版本</li>
+<li><code>git reset --hard HEAD^</code> head最新版本，回到上个版本，<code>git reset --hard HEAD^^</code>回到上上个版本，上100个版本<code>HEAD~100</code></li>
+<li><code>git reflog</code>查看命令历史回新版本</li>
+</ul>
+<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><p>工作区就是learngit ,工作区有一个隐藏目录<code>.git</code>，是Git的版本库。Git的版本库里有stage（或者叫index）的暂存区，还有自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</p>
+<p><img src="/images/git/head.jpg" alt="stage示意图"></p>
+<ul>
+<li><code>git add</code>把文件添加进去，是把文件修改添加到暂存区；<br><img src="/images/git/add.jpg" alt="暂存区状态"></li>
+<li><code>git commit</code>提交更改，是把暂存区的所有内容提交到当前分支。<br>新建license.txt 修改readme.txt 再分别<code>git add</code> 使用<code>git status</code>查看stage：<br><img src="/images/git/commit.jpg" alt="提交后状态"></li>
+</ul>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
+<li>场景1：当改了工作区某个文件的内容，撤销修改用命令<code>git checkout -- file。</code></li>
+<li>场景2：当改了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>，就回到了场景1，第二步按场景1操作。</li>
+<li>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</li>
+</ul>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><ul>
+<li>rm file  查看git status</li>
+<li>确认删除则git rm file ,git commit -m “”</li>
+<li>误删则 git checkout – file</li>
+</ul>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><ul>
+<li><p>创建SSH Key。<br><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></p>
+</li>
+<li><p>登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
+</li>
+</ul>
+<p><img src="/images/git/SSH.png" alt="ssh keys"></p>
+<ul>
+<li>点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。</li>
+</ul>
+<h3 id="添加远程库和删除"><a href="#添加远程库和删除" class="headerlink" title="添加远程库和删除"></a>添加远程库和删除</h3><ul>
+<li>登陆GitHub，创建一个新的仓库learngit。</li>
+<li>在本地learngit仓库下运行命令：<br><code>git remote add origin git@github.com:yourusername/xxx.git</code></li>
+</ul>
+<p>yourusername为github账户名，远程库的名字就是origin。</p>
+<ul>
+<li><code>git remote rm origin</code>删除远程 Git 仓库</li>
+<li><code>git remote -v</code> 远程 Git 仓库地址<h4 id="推送到远程库"><a href="#推送到远程库" class="headerlink" title="推送到远程库"></a>推送到远程库</h4></li>
+<li><code>git push -u origin master</code>把当前分支master推送到远程。</li>
+</ul>
+<p>第一次推送加上了-u参数，把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令<code>git push origin master</code></p>
+<h3 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h3><ul>
+<li><code>git clone git@github.com:yourusername/xxx.git</code>默认的git://使用ssh<br>还可以用<code>https://github.com/用户名/库名.git</code>使用https协议每次推送都必须输入口令</li>
+</ul>
+<h3 id="创建删除与合并分支"><a href="#创建删除与合并分支" class="headerlink" title="创建删除与合并分支"></a>创建删除与合并分支</h3><ul>
+<li><code>git checkout -b &lt;name&gt;</code>-b参数表示创建并切换</li>
+<li><code>git branch &lt;name&gt;</code>创建<code>&lt;name&gt;</code>分支</li>
+<li><code>git checkout &lt;name&gt;</code>切换到<code>&lt;name&gt;</code>分支</li>
+<li><code>git branch</code>命令查看当前分支,当前分支前面会标一个<code>*</code>号</li>
+<li><code>git merge &lt;name&gt;</code>合并某分支到当前分支</li>
+<li><code>git branch -d &lt;name&gt;</code> 删除分支</li>
+<li><code>git push --delete origin &lt;name&gt;</code>删除远程分支</li>
+<li>新建分支gh-pages 固定名字，<code>https://用户名.github.io/库名/</code>即可访问html </li>
+</ul>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><ul>
+<li>新建分支<code>git checkout -b feature1</code>,修改readme.txt改成<code>Creating a new branch is quick AND simple.</code>,在feature1分支上提交：</li>
+<li>切换到master分支<code>$ git checkout master</code>在master分支上修改readme.txt<code>,改成</code>Creating a new branch is quick &amp; simple.`提交</li>
+<li><code>git merge feature1</code>，Git无法执行“快速合并”，只能试图把各自的修改合并起来，<br>需手动解决冲突后再提交,修改成<code>Creating a new branch is quick and simple.</code>再git，commit</li>
+<li>用带参数的 <code>git log --graph --pretty=oneline --abbrev-commit</code>可以看到分支的合并情况：</li>
+</ul>
+<h3 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h3><p>合并分支时，<code>git merge --no-ff -m &quot;merge with no-ff&quot; dev</code>加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
+<h3 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h3><p>修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；<br>当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。</p>
+<ul>
+<li><code>git stash</code></li>
+<li><code>git checkout master</code></li>
+<li><code>git checkout -b issue-101</code></li>
+<li><code>git add readme.txt</code></li>
+<li><code>git commit -m &quot;fix bug 101&quot;</code></li>
+<li><code>git checkout master</code></li>
+<li><code>git merge --no-ff -m &quot;merged bug fix 101&quot; issue-101</code></li>
+<li><code>git branch -d issue-101</code></li>
+<li><code>git checkout dev</code></li>
+<li><code>git status</code></li>
+<li><code>git stash lis</code></li>
+</ul>
+<p>需要恢复一下，有两个办法：</p>
+<ul>
+<li><p><code>git stash apply</code>恢复，但是恢复后，stash内容并不删除，你需要用<code>git stash drop</code>来删除；</p>
+</li>
+<li><p><code>git stash pop</code>，恢复的同时把stash内容也删了：</p>
+</li>
+<li><p><code>git stash list</code>查看，就看不到任何stash内容了：</p>
+</li>
+<li><p><code>$ git stash list</code></p>
+</li>
+</ul>
+<p>可多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令：</p>
+<p><code>$ git stash apply stash@{0}</code></p>
+<h3 id="Feature分支"><a href="#Feature分支" class="headerlink" title="Feature分支"></a>Feature分支</h3><p>添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支:</p>
+<ul>
+<li><code>git checkout -b feature-vulcan</code></li>
+<li><code>git add vulcan.py</code></li>
+<li><code>git status</code></li>
+<li><code>git commit -m &quot;add feature vulcan&quot;</code></li>
+<li><code>git checkout dev</code></li>
+</ul>
+<p>若新功能必须取消，</p>
+<ul>
+<li><code>git branch -d feature-vulcan</code></li>
+</ul>
+<p>强行删除：</p>
+<ul>
+<li><code>git branch -D feature-vulcan</code></li>
+</ul>
+<h3 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h3><ul>
+<li><p>在另一台电脑（注意要把SSH Key添加到GitHub）或者同一台电脑的另一个目录下克隆：</p>
+<p><code>git clone git@github.com:michaelliao/learngit.git</code></p>
+</li>
+<li>查看远程库信息，使用<code>git remote -v</code>；</li>
+<li>默认情况下，只能看到本地的master分支,用<code>git branch</code>命令看看</li>
+<li><p>本地新建的分支如果不推送到远程，对其他人就是不可见的；</p>
+</li>
+<li><p>从本地推送分支，使用<code>git push origin branch-name</code>，如果推送失败，先用<code>git pull</code>抓取远程的新提交；</p>
+</li>
+<li><p>在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；</p>
+</li>
+<li><p>建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>；</p>
+</li>
+<li><p>从远程抓取分支，使用<code>git pull</code>，如果有冲突，要先处理冲突。</p>
+</li>
+<li><p>修改后<code>git add</code>、 <code>git commit -m &quot;&quot;</code>、 <code>git push origin branch-name</code></p>
+</li>
+</ul>
+<h3 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h3><ul>
+<li><code>git tag &lt;name&gt;</code>打一个新标签,默认标签是打在最新提交的commit上的，若要找之前的版本打标签，方法是找到历史提交的commit id，然后打上如 <code>git tag &lt;name&gt; commit_id</code></li>
+<li><code>git tag</code>查看所有标签：</li>
+<li><code>git show &lt;tagname&gt;</code>查看标签信息,标签不是按时间顺序列出，而是按字母排序的<br><code>git show v0.9</code></li>
+<li><code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；-a指定标签名，-m指定说明文字：</li>
+<li><code>git tag -s &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以用PGP签名标签,首先安装gpg（GnuPG）,如报错要配置Key</li>
+</ul>
+<h3 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h3><ul>
+<li><p>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</p>
+</li>
+<li><p>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</p>
+</li>
+<li><p>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</p>
+</li>
+<li></li>
+<li>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签。</li>
+</ul>
+<h3 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h3><p>在Git工作区的根目录下创建.gitignore文件，把要忽略的文件名填进去，Git就会自动忽略这些文件。所有配置文件<a href="https://github.com/github/gitignore" target="_blank" rel="noopener">.gitignore文件</a></p>
+<p>忽略文件的原则是：</p>
+<ul>
+<li>忽略操作系统自动生成的文件，比如缩略图等；</li>
+<li>忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；</li>
+<li>忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。</li>
+</ul>
+<p>要添加的文件被.gitignore忽略了，用-f强制添加：<br><code>git add -f App.class</code></p>
+<p>用git check-ignore命令检查：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git check-ignore -v App.class</span><br><span class="line">.gitignore:3:*.class    App.class</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.st status</span><br><span class="line">$ git config --global alias.co checkout</span><br><span class="line">$ git config --global alias.ci commit</span><br><span class="line">$ git config --global alias.br branch</span><br></pre></td></tr></table></figure>
+<p>命令git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区，配置一个unstage别名：<br><code>$git config --global alias.unstage &#39;reset HEAD&#39;</code></p>
+<p>配置一个git last，让其显示最后一次提交信息：<br><code>git config --global alias.last &#39;log -1&#39;</code></p>
+<p>配置lg:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.lg <span class="string">"log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</span></span><br></pre></td></tr></table></figure>
+<p>git lg的效果：</p>
+<p><img src="/images/git/lg.png" alt="lg的效果图"></p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><ul>
+<li>配置Git的时候，加上–global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。每个仓库的Git配置文件都放在.git/config文件中.</li>
+<li>别名就在[alias]后面，要删除别名，直接把对应的行删掉即可。</li>
+<li>当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> GIT </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[sublime配置及快捷键]]></title>
+      <url>/2017/03/20/sublime/</url>
+      <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p><img src="/images/sublime/sublime.png" alt="sublime"><br><a id="more"></a></p>
+<h3 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h3><p>安装packageconcrol:快捷键 ctrl+` (点是~那个键)或者view-show console,sublime text3版本粘贴如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = <span class="string">'df21e130d211cfc94d9b0905775a7c0f'</span> + <span class="string">'1e3d39e33b79698005270310898eea76'</span>; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( <span class="string">'http://packagecontrol.io/'</span> + pf.replace(<span class="string">' '</span>, <span class="string">'%20'</span>)).<span class="built_in">read</span>(); dh = hashlib.sha256(by).hexdigest(); <span class="built_in">print</span>(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="keyword">if</span> dh != h <span class="keyword">else</span> open(os.path.join( ipp, pf), <span class="string">'wb'</span> ).write(by)</span><br></pre></td></tr></table></figure>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><ul>
+<li><code>ctrl+n</code>:新建标签页 <code>ctrl+shift+n</code>:新建窗口，<code>ctrl+w</code>:关闭标签页，<code>ctrl+shift+t</code> :恢复刚刚关闭的标签</li>
+<li><code>ctrl+p</code>:可查找文件，输入路径或者文件名 +<code>@</code> 字符跳转可定位查找选择器，<code>#</code>关键字跳转，<code>:</code>行号跳转同<code>ctrl+g</code>。支持模糊匹配</li>
+<li><code>ctrl+shift+p</code> 跳出命令面板，输入文件类型如set js 可改文件类型，输入pcip 安装插件</li>
+<li><code>ctrl+k+b</code>：显示或隐藏侧栏</li>
+<li><code>F11</code>全屏，<code>shift+f11</code>无干扰全屏</li>
+<li><code>ctrl+enter</code>：在当前行下面新增一行并跳至该行</li>
+<li><code>ctrl+shift+enter</code>：在当前行上面新增一行并跳至该行</li>
+<li><code>ctrl+→/←</code>：逐词移动</li>
+<li><code>ctrl+shift+→/←</code>：逐词选择</li>
+<li><code>ctrl+shift+↑/↓</code>：移动当前行内容</li>
+<li><code>ctrl+shift+d</code>：复制该行（光标停留行）</li>
+<li><code>ctrl+H</code>查找并替换</li>
+<li>光标定位一个地方，<code>ctrl+d</code> 可选中单词，无限+<code>ctrl+d</code> 可查找该词产生多行游标，<code>ctrl+k</code> 可跳过，<code>ctrl+u</code>回退</li>
+<li>选中关键字然后<code>F3</code>跳到关键字下一个位置，<code>shift+f3</code> 跳上一个位置，<code>alt+F3</code> 全部选中，ctrl+d是自主选择</li>
+<li><code>ctrl+a</code>全选，+ <code>ctrl+shift+L</code> 多行游标 </li>
+<li>鼠标定位一个地方， 按<code>shift +鼠标右键</code>可拖动产生多行游标</li>
+<li><code>ctrl+j</code> 当前选中区域合并为一行</li>
+<li><code>ctrl+shift+enter</code> 跳转新建上一行</li>
+<li><code>ctrl+{</code>向左缩进</li>
+<li><code>ctrl+}</code>向右缩进</li>
+<li><code>ctrl+F</code>搜索，<code>enter</code>跳到关键字下一个位置，<code>shift+enter</code>跳到上一个位置，<code>alt+enter</code>选中所有位置</li>
+<li><code>ctrl+shift+V</code>粘贴并保持缩进格式</li>
+<li><code>ctrl+m</code>快速在起始括号和结尾括号间切换 <code>ctrl+shif+m</code> 快速选择括号间的内容<h3 id="安装常用插件"><a href="#安装常用插件" class="headerlink" title="安装常用插件"></a>安装常用插件</h3></li>
+<li><code>ctrl+shift+p</code> 输入<abbr title="Package Control:Install Package">pcip</abbr>回车再输入插件名<h4 id="前端开发插件"><a href="#前端开发插件" class="headerlink" title="前端开发插件"></a>前端开发插件</h4></li>
+<li>Emmet插件快捷键<ul>
+<li>输入<code>!</code> 按<code>ctrl+E</code>快速完成html布局</li>
+<li><code>alt+.</code> 匹配闭合标签</li>
+<li><code>ctrl+shift+g</code> 快速包裹内容 <code>shift+alt+w</code>也可</li>
+<li><code>shift+ctrl+;</code>删除包裹的html标签</li>
+<li>`shift+ctrl+``快速成对修改html标签</li>
+</ul>
+</li>
+<li><code>AutoFileName</code>插件 自动检索并补齐文件路径</li>
+<li><code>docblockr</code>插件快速完成注释 在函数的前面一行，输入<code>/**</code>按<code>tab</code></li>
+<li><code>CSScomb</code>插件前端css属性排序工具，快捷键<code>ctrl+shift+c</code>,排序后出现空行，安装<code>CSSFormat</code>插件，执行EDIT → css format →expanded 删除空行</li>
+<li><code>HTML-CSS-JS Prettify</code> 格式化，事先安装nodejs， <code>ctrl+shift+h</code>快捷键</li>
+<li><code>AdvanceNewFile</code> 快速创建新文件夹及文件， 快捷键<code>ctrl+alt+n</code><h4 id="Markdown插件"><a href="#Markdown插件" class="headerlink" title="Markdown插件"></a>Markdown插件</h4></li>
+</ul>
+<ul>
+<li><code>MarkDown Editing</code>：支持Markdown语法高亮</li>
+<li><code>OmniMarkupPreviwer</code>：实时在浏览器中预览<ul>
+<li><code>Ctrl+Alt+O</code>: Preview Markup in Browser.</li>
+<li><code>Ctrl+Alt+X</code>: Export Markup as HTML.</li>
+<li><code>Ctrl+Alt+C</code>: Copy Markup as HTML.</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 编辑器 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> sublime </tag>
+            
+            <tag> sublime插件 </tag>
+            
+            <tag> 编辑器 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Linux操作系统学习]]></title>
+      <url>/2017/03/10/linux/</url>
+      <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><h4 id="linux基本命令"><a href="#linux基本命令" class="headerlink" title="linux基本命令"></a>linux基本命令</h4><ul>
+<li>ls:列出当前文件所有文件夹</li>
+<li>uname：显示当前系统基本信息，底层内核信息，不带参数<ul>
+<li>uname -r :内核版本号</li>
+<li>uname -a : 所有信息 同 uname –all</li>
+</ul>
+</li>
+<li>ctrl+c:终止当前命令</li>
+<li>firefox :打开火狐</li>
+<li>任何命令+ &amp; ：放在后台运行，不会干扰当前命令行  如 firefox &amp;<a id="more"></a></li>
+<li>tab： <ul>
+<li>自动补全命令名 输入的字母有其他相似命令，按两下tab显示全部命令</li>
+<li>自动补全文件名</li>
+<li>无法补全参数</li>
+</ul>
+</li>
+<li>clear 清除当前屏幕</li>
+<li>jobs:管理后台作业</li>
+<li>sleep 5000:停5000s 回车卡5000s</li>
+<li>ctrl+z：暂停某个程序</li>
+<li>bg 继续开始暂停的后台 <code>bg 2</code> :序号为jobs显示出的序号</li>
+<li>fg 放回前台</li>
+</ul>
+<p>BASH会保存输入命令的记录：通过上下键或者history命令查看历史记录</p>
+<ul>
+<li>!!:重复前一个命令 同方向键↑</li>
+<li>!字符：重复前一个以字符开头的命令</li>
+<li>!num：按照历史记录的序号执行命令</li>
+<li>!?abc：重复之前包含abc的命令</li>
+<li>-n：重复n个命令之前的那个命令 </li>
+<li><strong>ctrl+r : 在历史记录中搜索命令</strong></li>
+<li><strong>重新调用前一个命令中的参数esc. （按esc之后按.）</strong></li>
+</ul>
+<h4 id="命令行通配符"><a href="#命令行通配符" class="headerlink" title="命令行通配符"></a>命令行通配符</h4><ul>
+<li>* 匹配零个或多个</li>
+<li>？ 匹配任意一个字符</li>
+<li>[0-9] 匹配一个数字范围</li>
+<li>[abc] 匹配列表里任何字符</li>
+<li>[^abc] 匹配列表以外字符</li>
+</ul>
+<h4 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h4><ul>
+<li><code>su -</code> 切换到root用户并使用一个新的运行环境；不加-即<code>su</code>不启用新环境；-后面加用户名切换到指定用户名如 <code>su - yx</code></li>
+<li><code>sudo</code>使用管理员用户身份运行命令</li>
+<li><code>id</code> 显示当前用户信息</li>
+<li><code>passwd</code> 修改当前用户密码</li>
+</ul>
+<h4 id="linux文件系统结构"><a href="#linux文件系统结构" class="headerlink" title="linux文件系统结构"></a>linux文件系统结构</h4><ul>
+<li>linux文件系统为一个倒转的单根树状结构</li>
+<li>文件系统的根为”/“</li>
+<li>文件系统严格区分大小写</li>
+<li>路径使用“/”分割，windows使用”\”</li>
+</ul>
+<p><img src="/images/linux/linux.png" alt="linux文件系统结构"></p>
+<ul>
+<li>每个shell或系统进程都有一个当前工作目录</li>
+<li>使用pwd命令可以显示当前的工作目录</li>
+</ul>
+<h4 id="文件名称"><a href="#文件名称" class="headerlink" title="文件名称"></a>文件名称</h4><ul>
+<li>文件名次大小写敏感</li>
+<li>名称最多可以使用255个字符</li>
+<li>除了正斜线外，都是有效字符</li>
+<li>通过touch字符可以创建一个空白文件或者更新已有文件的时间</li>
+<li>以”.”开头的文件为隐藏文件</li>
+</ul>
+<h5 id="ls列出目录内容"><a href="#ls列出目录内容" class="headerlink" title="ls列出目录内容"></a>ls列出目录内容</h5><ul>
+<li>ls -a：显示所有文件（包括隐藏文件–绝大多数为配置文件）</li>
+<li>ls -l:显示详细信息</li>
+<li>ls -R:递归显示子目录结构</li>
+<li>ls -ld:显示目录和链接信息</li>
+</ul>
+<h5 id="file查看文件的类型"><a href="#file查看文件的类型" class="headerlink" title="file查看文件的类型"></a>file查看文件的类型</h5><h4 id="绝对路径与相对路径"><a href="#绝对路径与相对路径" class="headerlink" title="绝对路径与相对路径"></a>绝对路径与相对路径</h4><ul>
+<li>绝对路径：以“/”开头，递归每级目录直到目标的路径，不受当前所在工作目录限制。</li>
+<li><p>相对路径：以当前目录为起点，到达目标的路径，受当前所在目录限制。</p>
+</li>
+<li><p>cd：切换目录</p>
+</li>
+<li>上一级目录：<code>..</code></li>
+<li>当前目录：<code>.</code></li>
+<li>家目录：<code>~</code></li>
+<li>上一个工作目录：<code>-</code></li>
+</ul>
+<h4 id="linux文件操作"><a href="#linux文件操作" class="headerlink" title="linux文件操作"></a>linux文件操作</h4><ul>
+<li>使用cp命令复制文件或目录：cp 源文件 目标文件 如cp linuxcast linuxcast2</li>
+<li>复制文件到文件夹中：cp 源文件 目标文件夹/ 如 cp linuxcast linuxcast.net/</li>
+<li>复制文件夹：cp -r 源文件夹 目标文件夹 ；加-v显示详细内容(<code>-r -v</code>同<code>-rv</code>)如 cp -rv linuxcast.net linuxcast.net2  </li>
+</ul>
+<p>mv移动或者重命名文件</p>
+<h5 id="删除文件rm"><a href="#删除文件rm" class="headerlink" title="删除文件rm"></a>删除文件rm</h5><ul>
+<li>-i ：交互式 （提示）</li>
+<li>-r ：递归的删除文件夹里的所有内容</li>
+<li><p>-f：强制删除，没有警告</p>
+</li>
+<li><p>创建目录 mkdir</p>
+</li>
+<li>删除目录 rmdir :不能删除非空目录</li>
+</ul>
+<h4 id="linux-系统目录"><a href="#linux-系统目录" class="headerlink" title="linux 系统目录"></a>linux 系统目录</h4><ul>
+<li>bin 常用的可执行二进制文件</li>
+<li>boot 引导目录 linux内核存在这</li>
+<li>dev 计算机上所有的硬件设备</li>
+<li>ect 几乎所有的配置文件</li>
+<li>home 家目录</li>
+<li>lib 相关的库文件</li>
+<li>media 挂载用的</li>
+<li>mnt 正常的挂载目录，所有系统肯定有</li>
+<li>opt 大型软件</li>
+<li>proc 只存在在内存中，虚拟文件夹，显示系统实时的信息</li>
+<li>sbin 可执行的二进制文件，命令只有超级用户root可以使用</li>
+<li>sys 系统底层信息</li>
+<li>tmp 临时目录，会自动删除</li>
+<li>usr 保存应用软件</li>
+<li>var 保存经常变化的信息–log日志信息</li>
+</ul>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><ul>
+<li>date <ul>
+<li>格式化显示系统时间：date +%Y-%m-%d或者date +%Y:%m:%d(连接符可自定义)</li>
+<li>修改时间 date -s “20:20:20” 需要切换到超级用户</li>
+</ul>
+</li>
+<li>hwclock（clock）显示硬件时钟时间</li>
+<li>cal查看日历</li>
+<li>uptime查看系统运行时间</li>
+<li>echo显示输入的内容</li>
+<li>cat显示文件内容</li>
+<li>head 显示文件的头几行，ore为10行 -n 指定显示的行数</li>
+<li>more用于翻页显示文件内容（只能向下翻页）</li>
+<li>less用于翻页显示文件内容（带上下翻页）</li>
+<li>tail显示文件的末尾几行（默认10行）<ul>
+<li>-n 指定显示的行数</li>
+<li>-f 追踪显示文件更新（一般用于查看日志，命令不会推出，而是持续显示新加入的内容）</li>
+</ul>
+</li>
+<li>lspci查看pci设备<ul>
+<li>-v查看详细信息</li>
+</ul>
+</li>
+<li>lsusb 查看usb设备<ul>
+<li>-v查看详细信息</li>
+</ul>
+</li>
+<li>lsmod查看加载的模块（驱动）</li>
+<li>shutdown 关闭、重启计算机  <ul>
+<li>-h 关闭计算机</li>
+<li>-r 重新启动<br>如：<br>立即关机：shutdown -h now<br>10分钟后关机：shutdown -h +10<br>23:30分关机：shutdown -h 23:30<br>立即重启：shutdown -r now</li>
+</ul>
+</li>
+<li>poweroff 立即关闭计算机</li>
+<li>reboot立即重启计算机</li>
+<li>zip用以压缩文件<ul>
+<li>zip xx.zip myfile</li>
+</ul>
+</li>
+<li>unzip用以解压zip文件 :unzip xx.zip</li>
+<li>gzip用以压缩文件</li>
+<li>tar用以归档文件<ul>
+<li>tar -cvf XX.tar 文件夹 如：tar -cvf ectbackup.tar /etc</li>
+<li>tar -xvf linuxcast.tar</li>
+<li><strong>tar -cvzf backup.tar.gz /etc</strong></li>
+<li>-z 参数就爱那个归档后的归档文件进行gzip压缩</li>
+</ul>
+</li>
+<li><code>du -sh</code> 可查看文件大小</li>
+<li>locate用以快速查找文件爱你、文件夹 locate keyword<ul>
+<li>此命令需要预先建立数据库，数据库默认每天更新一次，可用updatedb命令手工建立、更新数据库（好处查找速度快，缺点刚新建的文件数据库未更新将查询不到）</li>
+</ul>
+</li>
+<li>find用以高级查找文件、文件夹:find 查找位置 查找参数<br>如：  <ul>
+<li>find . -name *linuxcast*</li>
+<li>find / -name *.conf</li>
+<li>find / -perm 777 (查找所有权限为777)</li>
+<li>find / -type d (返回根目录中所有的目录 -l 链接 即快捷方式)</li>
+<li>find . -name “a*” -exec ls -l {} \;</li>
+<li>查找条件：-name -perm -user -group -ctime -type -size</li>
+</ul>
+</li>
+</ul>
+<h4 id="vim文本编辑器"><a href="#vim文本编辑器" class="headerlink" title="vim文本编辑器"></a>vim文本编辑器</h4><p>vim是一个命令行界面下的文本编辑工具，通过vim + 目标文件路径打开。</p>
+<p><strong>vim模式:</strong></p>
+<ul>
+<li>命令模式（常规模式）<br>  在vim启动后，默认进入命令模式，任何模式都可以通过esc回到命令模式。命令模式下可以通过键入不同的命令完成选择、复制、粘贴、撤销等操作。</li>
+<li>插入模式<br>  在命令模式下按i键即可进入插入模式，可以输入编辑文本内容。使用esc返回命令模式</li>
+<li>ex模式<br>  在命令模式中按：键可以进入ex模式。光标会移动到地步。在这里可以保存修改或退出vim</li>
+</ul>
+<h5 id="命令模式快捷键"><a href="#命令模式快捷键" class="headerlink" title="命令模式快捷键"></a>命令模式快捷键</h5><ul>
+<li>i 在光标前插入文本</li>
+<li>o 在当前行的下面插入新行</li>
+<li>dd 删除整行</li>
+<li>yy 将当前行的内容放入缓冲区（复制当前行）</li>
+<li>n+yy 将n行的内容放入缓冲行（复制n行）</li>
+<li>p 将缓冲区中的本文放入光标后（粘贴）</li>
+<li>u 撤销上一个操作</li>
+<li>r 替换当前字符</li>
+<li>/ 查找关键字</li>
+</ul>
+<h5 id="EX模式快捷键"><a href="#EX模式快捷键" class="headerlink" title="EX模式快捷键"></a>EX模式快捷键</h5><ul>
+<li>:w 保存当前修改</li>
+<li>:q 退出</li>
+<li>:q! 强制退出，不保存修改</li>
+<li>:x 保存并退出，相当于:xq</li>
+<li>:set number 显示行号</li>
+<li>:! 系统命令 执行一个系统命令并显示结果</li>
+<li>:sh  切换到命令行，使用ctrl+d切换回vim</li>
+<li>：noh/:set nohls 取消查找高亮显示</li>
+</ul>
+<h4 id="磁盘、分区、MBR和GPT"><a href="#磁盘、分区、MBR和GPT" class="headerlink" title="磁盘、分区、MBR和GPT"></a>磁盘、分区、MBR和GPT</h4><p>IDE 设备的名称为hd[a-z],SATA、SCSI、SAS、USB等设备名称为sd[a-z]</p>
+<p>不同分区用设备名称+分区号 如sda1、sda2</p>
+<p>主流的分区机制为MBR和GPT</p>
+<p><strong>MBR是传统的分区机制，应用于绝大多数使用BIOS的PC设置</strong></p>
+<ul>
+<li>MBR支持32bit和64bit系统</li>
+<li>MBR支持分区数量有限</li>
+<li>MBR只支持不超过2T的硬盘。超过2T的硬盘只能使用2T空间</li>
+</ul>
+<p>MBR占有512字节，前446引导代码，64字节分区表，2个字节启动标识55 aa</p>
+<p>MBR分区：</p>
+<ul>
+<li>主分区：只能创建4个主分区</li>
+<li>扩展分区：一个扩展分区会占用一个主分区位置</li>
+<li>逻辑分区：最多支持63个IDE分区和15个SCSI分区</li>
+</ul>
+<p><strong>GPT（guid partition table）：较新的分区机制</strong></p>
+<ul>
+<li>支持超过2T的磁盘</li>
+<li>向后兼容MBR</li>
+<li>必须在支持UEFI硬件上才能使用</li>
+<li>必须使用64bit系统</li>
+<li>mac、linux系统都能支持GPT分区格式</li>
+<li>win7 64bit、winserver2008 64bit支持GPT</li>
+</ul>
+<p>FDISK分区工具：一个基于MBR的分区工具，如果使用GPT，无法使用fdisk进行分区</p>
+<ul>
+<li>只有具有超级用户权限才能运行</li>
+<li>使用fdisk -l可以列出所有安装的磁盘及其分区信息</li>
+<li>使用fdisk /dev/sda 可以对目标磁盘进行分区操作</li>
+<li>分区之后需要使用partprobe命令让内核更新分区信息，否则需要重启才能识别新的分区</li>
+<li>/proc/partitions文件也可用来查看分区信息</li>
+</ul>
+<h4 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h4><p>操作系统通过文件系统管理文件及数据，磁盘或分区需要创建文件系统之后才能够为操作系统能够使用，创建文件系统的过程又成为格式化。</p>
+<ul>
+<li>没有文件系统的设备又称之为裸raw设备</li>
+<li>常见的文件系统有fat32  、NTFS、ext2、ext3、ext4、xfs、HFS等</li>
+<li>文件系统之间的区别：日志、支持的分区大小、支持的单个文件大小、性能等</li>
+<li>windows下的主流文件系统是NTFS</li>
+<li>linux下的主流文件系统是ext3、ext4</li>
+</ul>
+<p><strong>创建文件系统：mke2fs</strong></p>
+<ul>
+<li>mke2fs -t ext4 /dev/sdb1</li>
+<li>-b blocksize 指定文件系统块大小</li>
+<li>-c 建立文件系统时检查坏损块</li>
+<li>-L label 指定卷标</li>
+<li>-j 建立文件系统日志</li>
+</ul>
+<p><strong>mkfs也可创建文件系统，较简单，参数比较少，不能精细化的控制</strong></p>
+<p><strong>dumpe2fs 查看文件系统信息</strong></p>
+<p>带日志的文件系统 ext3、ext4拥有较强的稳定性，在出错时可以进行恢复。</p>
+<ul>
+<li>文件系统将准备执行的事务的具体内容写入日志</li>
+<li>文件系统进行操作</li>
+<li>操作成功后，将事务的具体内容从日志中删除</li>
+</ul>
+<p>好处：当事务执行时出现意外，可以通过查询日志进行恢复操作。</p>
+<p><strong>e2label 用来为文件系统添加标签</strong></p>
+<ul>
+<li>e2label /dev/sda2 显示sda2的系统标签</li>
+<li>e2label /dev/sda2 LINUXCAST 将sda2的系统标签设置为LINUXCAST，标签建议用大写</li>
+</ul>
+<p><strong>fsck用来检查并修复损坏的文件系统</strong></p>
+<ul>
+<li>使用-y参数不提示而直接进行修复</li>
+<li>默认fsck会自动判断文件系统类型，如果文件系统损坏较严重，用-t参数指定文件系统类型</li>
+<li>对于识别为文件的损坏数据（文件系统无记录），fsck会将该文件放入lost+found目录</li>
+<li>系统驱动时会对磁盘进行fsck操作</li>
+</ul>
+<h4 id="挂载、使用文件系统"><a href="#挂载、使用文件系统" class="headerlink" title="挂载、使用文件系统"></a>挂载、使用文件系统</h4><p>磁盘或分区创建文件系统后，需要挂载到一个目录才能够使用。</p>
+<p>windows或mac会自动挂载，windows称之为c盘、d盘，linux需要手工进行挂载操作或配置系统进行自动挂载 /mnt</p>
+<p><strong>通过mount命令将格式化好的磁盘或分区挂载到一个目录上：mount /dev/sdb1(要挂载的分区) 、/mnt(挂载点)</strong></p>
+<ul>
+<li>不带参数的mount命令会显示所有已挂载的文件系统</li>
+<li>-t 指定文件系统的类型</li>
+<li>-o 指定挂载选项<ul>
+<li>ro,rw 以只读或读写形式挂载，默认是rw 如 mount -o remount,ro /dev/sdb1 /mnt/</li>
+<li>sync 代表不使用缓冲，而是对所有操作直接写入磁盘</li>
+<li>async 代表使用缓冲，默认是async</li>
+<li>noatime 代表每次访问文件时不更新文件的访问时间</li>
+<li>atime 代表每次访问文件时更新文件的访问时间</li>
+<li>remount 重新挂载文件系统</li>
+</ul>
+</li>
+</ul>
+<p><strong>umount命令用来卸载已挂载的文件系统，相当于windows的弹出</strong></p>
+<p>umount 文件系统/挂载点</p>
+<p>umount /dev/sdb1== umount /mnt</p>
+<p>如果出现device is busy 报错，表示该文件系统正在被使用，无法卸载。</p>
+<ul>
+<li>使用<code>fuser -m /mnt</code>查看使用文件系统的进程</li>
+<li>使用<code>lsof /mnt</code>查看正在被使用的文件</li>
+</ul>
+<p>配置文件 /etc/fstab 用来定义需要自动挂载的文件系统<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">需要挂载的设备 挂载点 文件系统 挂载选项  dump、fsck相关选项</span><br><span class="line"></span><br><span class="line">/dev/sdb1       /mnt   ext4  defaults  0 0</span><br><span class="line"></span><br><span class="line">LABEL=LINUXCAST  /mnt   ext4  defaults  0 0</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>要挂载的设备也可以label进行识别，使用LABEL=LINUXCAST取代/dev/sdb1</li>
+<li>mount -a 命令会挂载所有fstab中定义的自动挂载项</li>
+</ul>
+<p>-h/–help 参数获取好似用方法、参数信息</p>
+<p>man命令帮助命令：如man ls</p>
+<p>man -k 关键字 ：查询包含该关键字的文档</p>
+<p>info命令更详细。info 和man都可以用/+关键字进行搜索 </p>
+<h4 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h4><ul>
+<li>用户id为32位，</li>
+<li>用户分为三种：<ul>
+<li>root用户：id为0的用户为root用户</li>
+<li>系统用户：1-499  没有shell</li>
+<li>普通用户：500以上</li>
+</ul>
+</li>
+<li>系统中的文件都有一个所属用户及所属组</li>
+<li>使用id命令可以显示当前用户的信息</li>
+<li>使用passwd命令可以修改当前用户密码</li>
+</ul>
+<h4 id="相关文件"><a href="#相关文件" class="headerlink" title="相关文件"></a>相关文件</h4><ul>
+<li>/etc/passwd 保存用户信息</li>
+<li>/etc/shadow 保存用户密码（加密的）</li>
+<li>/etc/group 保存组信息</li>
+</ul>
+<p><strong>查看登录的用户</strong></p>
+<ul>
+<li>whoami：显示当前用户</li>
+<li>who：显示有哪些用户已经登录系统</li>
+<li>w：显示哪些用户已经登录并在干什么</li>
+</ul>
+<p><strong>创建一个用户： useradd </strong></p>
+<ul>
+<li>在 /etc/passwd中添加用户信息</li>
+<li>使用passwd创建密码，则将密码保存在/etc/shadow中</li>
+<li>为用户建立一个新的家目录/home/新用户</li>
+<li>在/etc/skel/中的文件复制到用户的家目录中</li>
+<li>建立一个于用户用户名相同的组，新建用户默认属于这个同名组</li>
+<li>-d 家目录</li>
+<li>-s 登录shell</li>
+<li>-u userid</li>
+<li>-g 主族</li>
+<li>-G 附属组（最多31个，用“,”隔开）</li>
+<li>usermod 修改用户信息<ul>
+<li>-l 新用户名</li>
+<li>-u 新userid</li>
+<li>-d 用户家目录位置</li>
+<li>-g用户所属主组</li>
+<li>-G 用户所属附属组</li>
+<li>-L锁定用户使其不能登录</li>
+<li>-U 解除锁定</li>
+</ul>
+</li>
+<li>userdel 用以删除指定用户 （保留用户的家目录）<ul>
+<li>userdel -r 同时删除用户的家目录</li>
+</ul>
+</li>
+</ul>
+<p><strong>创建组</strong></p>
+<p>groupadd 创建组<br>groupmod -n 修改组名<br>groupmod -g 修改组id<br>groupdel 删除组</p>
+<p>对于目录来说必须有x执行权限，否则无法查看内容</p>
+<p>Linux基于UGO模型进行控制：</p>
+<ul>
+<li>U代表user，G代表Group，O代表Other</li>
+<li>每个文件的权限基于UGO进行设置</li>
+<li>权限三个一组（rwx），对应UGO分别设置</li>
+<li>每一个文件拥有一个所属用户和所属组，对应UG，不属于该文件所属用户或所属组的使用O权限</li>
+<li>使用ls -l查看当前目录下文件的详细信息，分别对应：UGO、 链接数量、 U：所属用户 、G：所属组 、大小 、时间 、文件名。</li>
+</ul>
+<p>drwxr-xr–:d表示文件类型 rwx:U权限 r-x:G权限 r–:O权限</p>
+<ul>
+<li>chown用以改变文件的所属用户<ul>
+<li>-R 参数递归的修改目录下的所有文件的所属用户</li>
+</ul>
+</li>
+<li>chgrp用以改变文件的所属组<ul>
+<li>-R 参数递归的修改目录下的所有文件的所属组</li>
+</ul>
+</li>
+</ul>
+<p><strong>修改权限：chmod 模式 文件</strong></p>
+<ul>
+<li>u、g、o分别代表用户、组和其他</li>
+<li>a可以代指ugo</li>
+<li>+、—代表加入或删除对应权限</li>
+<li>r\w\x代表三种权限</li>
+</ul>
+<p>示例：</p>
+<ul>
+<li>chmod u+rw linuxcast.net</li>
+<li>chmod g-x linuxcast.net</li>
+<li>chmod go+r linuxcast.net</li>
+<li>chmod a-x linuxcast.net</li>
+</ul>
+<p>chmod支持以数字方式修改权限 </p>
+<ul>
+<li>r=4(2^2)</li>
+<li>w=2(2^1)</li>
+<li>x=1(2^0)</li>
+<li>rw=4+2=6</li>
+<li>rwx=4+2+1=7</li>
+<li>r-x=4+1=5</li>
+<li>chmod 660 linuxcast.net == rw-rw—-</li>
+<li>chmod 775 linuxcast.net ==rwxrwxr-x</li>
+</ul>
+<p><strong>每一个终端都拥有一个umask属性，来确认新建文件、文件夹的默认权限</strong></p>
+<ul>
+<li>umask使用数字权限方式表示</li>
+<li>目录的默认权限：777-umask</li>
+<li>文件的默认权限：666-umask</li>
+<li>一般普通用户默认umask是002，root用户默认umask是022</li>
+<li>对于普通用户：新建文件的权限：666-002=664  新建目录的权限是777-002=775</li>
+</ul>
+<p><strong>设置特殊权限</strong></p>
+<ul>
+<li>设置suid<ul>
+<li>chmod u+s linuxcast.net</li>
+</ul>
+</li>
+<li>设置sgid<ul>
+<li>chmod g+s linuxcast.net</li>
+</ul>
+</li>
+<li>设置sticky<ul>
+<li>chmod o+t linuxcast.net</li>
+</ul>
+</li>
+</ul>
+<p>数字方式表示：</p>
+<ul>
+<li>suid =4</li>
+<li>sgid =2</li>
+<li>sticky=1</li>
+<li>chmod 4755 linuxcast.net 设置了suid</li>
+</ul>
+<p>ip编址是一个双层编址方案，一个ip地址标识一个主机（或一个网卡接口）<br>最为广泛的是ipv4 编址，逐渐向ipv6编址切换<br>ipv4地址为32位长，ipv6地址为128位长<br>一个ipv4地址分为两个不分：网络部分和主机部分<br>网络部分用来表示所属区域、主机部分用来标识该区域中的哪个主机  </p>
+<p>域名分为三个部分 ：<br>www.linuxcate.net  主机名 域名 类型 </p>
+<p>域名与ip地址通过DNS转换</p>
+<ul>
+<li>要配置一个局域网通信的计算机<ul>
+<li>ip地址</li>
+<li>子网掩码</li>
+</ul>
+</li>
+<li>要配置一个跨网段通信的计算机<ul>
+<li>ip地址</li>
+<li>子网掩码</li>
+<li>网关</li>
+</ul>
+</li>
+<li>要配置一个可上网的计算机<ul>
+<li>ip地址</li>
+<li>子网掩码</li>
+<li>网关</li>
+<li>DNS</li>
+</ul>
+</li>
+</ul>
+<h4 id="以太网连接"><a href="#以太网连接" class="headerlink" title="以太网连接"></a>以太网连接</h4><ul>
+<li>以太网接口被命名为：eth0、eth1等，0、1代表网卡编号</li>
+<li>通过lspci命令可以查看网卡硬件信息，如果是usb网卡，可以使用lsusb来查看</li>
+<li>ifconfig来查看接口信息<ul>
+<li>ifconfig -a 查看所有接口</li>
+<li>ifconfig eth0 查看指定接口</li>
+</ul>
+</li>
+<li>ifup eth0 启用eth0接口</li>
+<li>ifdown eth0 禁用接口</li>
+</ul>
+<p>setup 命令配置网络信息</p>
+<ul>
+<li>网卡配置文件<ul>
+<li>/etc/sysconfig/network-script/ifcfg-eth0</li>
+</ul>
+</li>
+<li>DNS配置文件<ul>
+<li>/etc/resolv.conf</li>
+</ul>
+</li>
+<li>主机名配置文件<ul>
+<li>/etc/sysconfig/network</li>
+</ul>
+</li>
+<li>静态主机名配置文件<ul>
+<li>/etc/hosts</li>
+</ul>
+</li>
+</ul>
+<p>网络测试命令</p>
+<ul>
+<li>测试网络连通性<ul>
+<li>ping 192.168.1.1</li>
+<li>ping www.linuxcast.net</li>
+</ul>
+</li>
+<li>测试DNS解析<ul>
+<li>host www.linuxcast.net</li>
+<li>dig  www.linuxcast.net</li>
+</ul>
+</li>
+<li>显示路由表：ip route</li>
+<li>追踪到达目标地址的网络路径<ul>
+<li>traceroute www.linuxcast.net</li>
+</ul>
+</li>
+<li>使用mtr进行网络质量测试<ul>
+<li>mtr www.linuxcast.net</li>
+</ul>
+</li>
+<li>实时修改主机名：hostname（重启后恢复）</li>
+<li>永久性修改主机名：/etc/sysconfig/network 中 hostname</li>
+</ul>
+<h4 id="管道和重定向"><a href="#管道和重定向" class="headerlink" title="管道和重定向"></a>管道和重定向</h4><p><strong>命令行shell的数据流：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th>说明</th>
+<th style="text-align:center">编号</th>
+<th>默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">STDIN</td>
+<td>标准输入</td>
+<td style="text-align:center">0</td>
+<td>键盘</td>
+</tr>
+<tr>
+<td style="text-align:center">STDOUT</td>
+<td>标准输出</td>
+<td style="text-align:center">1</td>
+<td>终端 </td>
+</tr>
+<tr>
+<td style="text-align:center">STDERR</td>
+<td>标准错误</td>
+<td style="text-align:center">2</td>
+<td>终端 </td>
+</tr>
+</tbody>
+</table>
+<p>命令通过STDIN接收参数或数据，通过STDOUT输出结果或通过STDERR输出错误</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>关键字</th>
+<th>定义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重定向</td>
+<td>&gt;</td>
+<td>将STDOUT重定向到文件（覆盖）</td>
+<td>echo”linuxcast” &gt; outfile</td>
+</tr>
+<tr>
+<td>重定向</td>
+<td>&gt;&gt;</td>
+<td>将STDOUT重定向到文件（追加）</td>
+<td>echo”linuxcast” &gt;&gt; outfile</td>
+</tr>
+<tr>
+<td>重定向</td>
+<td>2&gt;</td>
+<td>将STDERR重定向到文件（覆盖）</td>
+<td>ls -ls 2&gt; outfile</td>
+</tr>
+<tr>
+<td>重定向</td>
+<td>2&gt;&amp;1</td>
+<td>将STDERR 与STDOUT结合</td>
+<td></td>
+</tr>
+<tr>
+<td>重定向</td>
+<td>&lt;</td>
+<td>重定向标准输入</td>
+<td>grep linuxcast &lt; /etc/passwd</td>
+</tr>
+<tr>
+<td>管道</td>
+<td>&#124;</td>
+<td>将一个名的STDOUT作为另一个命令的STDIN</td>
+<td>find / -user linuxcast 2&gt; /dev/null &#124; grep Video</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>管道通常用来组合不同的命令。</li>
+<li>重定向通常用来保存某命令的输出信息或错误信息，可以用来记录执行结果或保存错误信息到一个指定的文件</li>
+</ul>
+<p><strong>基于关键字搜索 grep</strong></p>
+<ul>
+<li>-i 在搜索的时候忽略大小写</li>
+<li>-n 显示所在行数</li>
+<li>-v 输出不带关键字的行</li>
+<li>-Ax 在输出的时候包含结果所在行之后的指定行数</li>
+<li>-Bx 在输出的时候包含结果所在行之前的指定行数</li>
+</ul>
+<p><strong>基于列处理文本cut</strong></p>
+<ul>
+<li>-d 指定分割字符 （默认为TAB）</li>
+<li>-f 指定输出的列号</li>
+<li>-c 基于字符进行切割</li>
+</ul>
+<p><code>grep linuxcat /etc/passwd | cut -d: -f3</code></p>
+<p><strong>wc用以统计文本信息</strong></p>
+<ul>
+<li>-l 只统计行数</li>
+<li>-w 只统计单词</li>
+<li>-c 只统计字节数</li>
+<li>-m 只统计字符数</li>
+</ul>
+<p>sort用以对文本内容进行排序（默认正序）</p>
+<ul>
+<li>-r 进行倒序排序</li>
+<li>-n 基于数字进行排序</li>
+<li>-f 忽略大小</li>
+<li>-u 删除重复行</li>
+<li>-t c 使用c作为分隔符分割为列进行排序</li>
+<li>-k x 当进行基于指定字符分割为列的排序时，指定基于那个列排序</li>
+</ul>
+<font color="red">uniq用以删除重复的相邻行</font>
+
+<p><strong>diff用来比较两个文件的区别：diff linuxcast linuxcast-new</strong></p>
+<ul>
+<li>-i 忽略大小写</li>
+<li>-b 忽略空格数量的改变</li>
+<li>-u 统一显示比较信息（一般用以生成patch文件）</li>
+</ul>
+<p>aspell用以显示检查文本拼写</p>
+<p>tr用以处理文本内容</p>
+<ul>
+<li>删除关键字：tr -d ‘TMD’ &lt; linuxcast</li>
+<li>转换大小写： tr ‘a-z’ ‘A-Z’ &lt; linuxcast</li>
+</ul>
+<p>sed用以搜索并替换文本<br>sed ‘s/linux/unix/g’ linuxcast :在linuxcast中查找linux全部g替换成unix<br>sed ‘1,50s/linux/unix/g’ linuxcast :1-50行<br>sed -e ‘s/linux/unix/g’ -e ‘s/nash/nash_su/g’ linuxcast :查找多个内容<br>sed -f sededit linuxcast ：把命令存到sededit中，调用sededit </p>
+<p>BIOS找到可启动设备后执行其引导代码，引导代码为MBR的前446字节。跳转到grub（/boot）是linux使用的主流引导程序</p>
+<p>Linux系统启动：</p>
+<p>BIOS –&gt; MBR: Boot Code –&gt; 执行引导程序 - GRUB –&gt; 加载内核 –&gt; 执行init –&gt; runlevel</p>
+<p>dmesg查看本次内核启动的数据信息 /var/log/</p>
+<ul>
+<li>init是linux系统中运行的第一个进程</li>
+<li>调用/etc/rc.d/rc.sysinit负责对系统进行初始化，挂载文件系统，并且根据运行级别启动相应服务</li>
+</ul>
+<p>linux运行级别：/etc/inittab配置默认的运行级别</p>
+<ul>
+<li>0关机</li>
+<li>1单用户模式</li>
+<li>2不带网络的多用户模式</li>
+<li>3多用户模式</li>
+<li>4未使用<br>-5 XII图形化模式<br>-6 重新启动</li>
+</ul>
+<p><strong>单用户修改root密码</strong></p>
+<p>开机引导时为内核传递参数‘1’或者“single”系统进入单用户<br>单用户模式下不启动任何服务<br>单用户模式直接以root用户登录，并且不需要密码<br>可以使用passwd修改root密码</p>
+<p>源代码一般会被打包成 tar.gz的归档压缩文件，需要编译成为二进制形式才能运行使用</p>
+<ul>
+<li>安装软件：rpm -i software.rpm，-v显示详细信息-h显示进度条</li>
+<li>卸载软件：rpm -e software</li>
+<li>升级形式安装：rpm -U software-new</li>
+<li>列出所有安装的rpm软件：rpm -qa</li>
+<li>查询目标文件属于哪个rpm包：rpm -qf filename</li>
+<li>查询指定已安装rpm软件的信息：rpm -qi packagename</li>
+<li>查询指定已安装rpm软件包含的文件：rpm -ql packagename</li>
+<li>查询rpm文件的信息：rpm -qip software.rpm</li>
+<li>查询rpm文件包含的文件：rpm -qlp software.rpm</li>
+<li>导入密钥：rpm –import RPM-GPG-KEY-CentOS-6</li>
+<li>验证rpm文件：rpm -K software.rpm</li>
+<li>验证已安装的软件：rpm -V software</li>
+</ul>
+<ul>
+<li>yum使用仓库保存管理rpm软件，保存在/etc/yum.repos.d/目录下，格式如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[LinuxCast]</span><br><span class="line">name=This is linuxcast rpm soft repo</span><br><span class="line">baseurl=http://www.linuxcast.nt/yum/centos/6/i386/rpms/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br></pre></td></tr></table></figure>
+<ul>
+<li>仓库可以使用file、http、ftp、nfs方式</li>
+<li>yum配置文件必须.repo结尾</li>
+<li>一个配置文件内可以保存多个仓库的配置信息</li>
+<li>/etc/yum.repos.d/目录下可以存在多个配置文件</li>
+<li>yum install software-name 安装指定软件</li>
+<li>yum remove software-name 卸载指定软件</li>
+<li>yum update software-name 更新软件</li>
+<li>yum search keyword 搜索</li>
+<li>yum list (all |installed |recent|updates)列出全部、安装的、最近的、软件更新</li>
+<li>yum info packagename 相当于 rpm -qi 显示指定软件的信息</li>
+<li>yum whatprovides filename 查询哪个rpm软件包含目标文件</li>
+</ul>
+<p>创建yum仓库</p>
+<ul>
+<li>将所有rpm文件拷贝到一个文件夹中 ：cp -rv /光盘/Packages/* /linuxcast-yum</li>
+<li>通过rpm命令手工安装createrepo软件：rpm -ivh createrepo</li>
+<li>运行命令createrepo -v /yum仓库 进行索引，索引后创建repodata目录</li>
+<li>如果有分组信息，则在运行命令的时候使用-g参数指定分组文件<br>createrepo -g /tmp/*compsxml /rpm-directory<br>CentOS/RHEL的分组信息保存在光盘repodata/目录下，文件名以comps.xml结尾的xml文件<br>-创建好后设置配置文件：/etc/yum.repos.d/ —&gt;vim linuxcast.repo</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[linuxcast]</span><br><span class="line">name=linuxcast.net Yum repo  #描述</span><br><span class="line">baseurl= file:///linuxcast-yum/ #file://yum仓库绝对路径</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br></pre></td></tr></table></figure>
+<p>创建好之后本机可以通过file方式直接使用，如果需要作为对外的YUM仓库服务器，可以通过HTTP,FTP或NFS协议共享出去</p>
+<ul>
+<li>yum clearn all 每次运行清除缓存信息</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 操作系统 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo+github+coding搭建博客及备份]]></title>
+      <url>/2017/03/10/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+      <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p><img src="/images/hexo/hexo.jpg" alt="hexo"><br><a id="more"></a></p>
+<h3 id="搭建环境准备（包括node-js和git环境）"><a href="#搭建环境准备（包括node-js和git环境）" class="headerlink" title="搭建环境准备（包括node.js和git环境）"></a>搭建环境准备（包括node.js和git环境）</h3><ul>
+<li>下载<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>并安装</li>
+<li>下载<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>并安装</li>
+</ul>
+<h4 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h4><ul>
+<li><p>打开Git Bash,设置Git的user name和email：(如果是第一次的话)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;github用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成密钥<code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code>,会生成一个文件在用户目录下，打开用户目录，找到<code>.ssh\id_rsa.pub</code>文件，打开并复制里面的内容</p>
+</li>
+<li>登录github设置SSH and GPGkeys,将复制的密钥添加进去</li>
+</ul>
+<h4 id="node-js配置"><a href="#node-js配置" class="headerlink" title="node.js配置"></a>node.js配置</h4><ul>
+<li>下载安装node.js，安装完后打开运行cmd,输入<code>node -v</code> 、<code>npm -v</code>查看是否安装成功</li>
+<li><p>Nodejs全局环境变量配置</p>
+<ul>
+<li>在安装的Nodejs的主目录下如d:\nodejs下新建<code>node_global</code>及<code>node_cache</code>两个文件夹</li>
+<li><p>在cmd 中输入如下命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix “d:\nodejs\node_global”</span><br><span class="line">npm config set cache “d:\nodejs\node_cache”</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加NOEDE_PATH  </p>
+</li>
+</ul>
+</li>
+</ul>
+<p>我的电脑”右键“属性”-“高级系统设置”-“高级”-“环境变量，在系统变量下新建”NODE_PATH”，输入”D:\nodejs\node_global\node_modules”，改变了module的默认地址，所以上面的用户变量都要跟着改变一下（用户变量”PATH”修改为“d:\nodejs\node_global\”）</p>
+<ul>
+<li>npm安装模块使用<a href="http://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像</a><br>使用 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm<br><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
+</ul>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p><strong>新建博客到github基本流程</strong></p>
+<ul>
+<li><code>npm install -g hexo-cli</code></li>
+<li>新建文件夹如Blog，打开文件夹，按shift+鼠标右键 在此处打开命令行输入：</li>
+<li><code>hexo init blog</code>初始化博客</li>
+<li><code>hexo new 博客名</code>新建文章</li>
+<li><code>hexo g</code>生成网页</li>
+<li><code>$ cnpm install hexo-server --save</code>搭建本地服务器,<code>hexo s</code>启动服务预览,打开浏览器输入地址：<code>localhost:4000</code></li>
+<li>安装Git部署插件<code>npm install hexo-deployer-git --save</code>,<code>hexo d</code>部署上传到GitHub的仓库里。</li>
+</ul>
+<p><strong>常用的Hexo 命令</strong></p>
+<ul>
+<li>npm install hexo -g #安装Hexo</li>
+<li>npm update hexo -g #升级 </li>
+<li>hexo init #初始化博客</li>
+<li>hexo n “我的博客” == hexo new “我的博客” #新建文章</li>
+<li>hexo g == hexo generate #生成</li>
+<li>hexo s == hexo server #启动服务预览</li>
+<li>hexo d == hexo deploy #部署</li>
+<li>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</li>
+<li>hexo server -s #静态模式</li>
+<li>hexo s –debug #开启调试模式</li>
+<li>hexo server -p 5000 #更改端口</li>
+<li>hexo server -i 192.168.1.1 #自定义 IP</li>
+<li>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</li>
+</ul>
+<h3 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h3><h4 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h4><p>推荐安装<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">Next主题</a>将主题文件<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a>下载到themes/next目录下，<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>每个主文件下有两个配置文件 <code>_config.yml</code>，一个是站点根目录下即hexo本身的配置文件，一个是next主题配置文件</p>
+<ul>
+<li>站点的配置文件_config.yml<br>打开站点的_config.yml修改主题为next,设置基本站点信息,依次是网站标题、副标题、网站描述、作者、网站头像外部链接、网站语言、时区等<br><img src="/images/hexo/themes.jpg" alt="themes"><br><img src="/images/hexo/base.jpg" alt="base"></li>
+<li>主题的_config.yml配置文件<br>找到Scheme Settings<br><img src="/images/hexo/scheme.jpg" alt="scheme"></li>
+</ul>
+<h4 id="添加网易云音乐"><a href="#添加网易云音乐" class="headerlink" title="添加网易云音乐"></a>添加网易云音乐</h4><p>打开网页版的网易云音乐，选择喜欢的音乐，点击生成外链播放器,修改 blog\themes\next\layout\_macro的sidebar.swig文件，添加刚刚复制的外链代码</p>
+<h4 id="设置背景"><a href="#设置背景" class="headerlink" title="设置背景"></a>设置背景</h4><p>把你挑选的背景图片命名为：background.jpg，放在blog\themes\next\source\images里，在blog\themes\next\source\css\_custom文件的custom.styl首部添加：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>:<span class="built_in">url</span>(/images/background.jpg);</span><br><span class="line">  <span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>background-attachment: fixed;是固定背景图片。<br>这是设置一张静态图片作为背景，其实Next主题自带有动态的背景效果，修改主题配置文件中的<code>canvas_nest: false</code>为<code>canvas_nest: true</code>即可。</p>
+<h4 id="增加侧栏菜单条目"><a href="#增加侧栏菜单条目" class="headerlink" title="增加侧栏菜单条目"></a>增加侧栏菜单条目</h4><p>默认的侧栏菜单条目有：首页、归档、标签、关于、搜索等。如果你想要增加其他的菜单条目，修改主题配置文件_config.yml里的Menu Settings中的menu和menu_icons两个地方,menu_icons对应菜单项的图标来自于<a href="http://fontawesome.io/" target="_blank" rel="noopener">Font Awesome</a></p>
+<h4 id="写博文"><a href="#写博文" class="headerlink" title="写博文"></a>写博文</h4><ul>
+<li><p>hexo new ‘postName’ 新建生成md文件在source/_posts路径下,完成格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName #文章页面上的显示名称，一般是中文</span><br><span class="line">date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: 默认分类 #分类</span><br><span class="line">tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</span><br><span class="line">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span><br><span class="line">---</span><br><span class="line">以下是正文</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在正文合适的位置加上<code>&lt;!--more--&gt;</code>,主页设置文章显示长度</p>
+</li>
+</ul>
+<h4 id="文本居中的引用"><a href="#文本居中的引用" class="headerlink" title="文本居中的引用"></a>文本居中的引用</h4><ul>
+<li>HTML方式：使用这种方式时，给 img 添加属性 class=”blockquote-center” 即可。</li>
+<li>标签方式：使用 centerquote 或者 简写 cq。<blockquote>
+<p>此标签要求 NexT 的版本在 0.4.5 或以上。 若你正在使用的版本比较低，可以选择使用 HTML 方式。</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 其中 class="blockquote-center" 是必须的 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">"blockquote-center"</span>&gt;</span>blah blah blah<span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span></span><br><span class="line">&#123;% centerquote %&#125;blah blah blah&#123;% endcenterquote %&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 标签别名 --&gt;</span></span><br><span class="line">&#123;% cq %&#125; blah blah blah &#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="标签页和分类设置"><a href="#标签页和分类设置" class="headerlink" title="标签页和分类设置"></a>标签页和分类设置</h4><p><strong>标签页设置</strong></p>
+<ul>
+<li><code>$ hexo new page &quot;tags&quot;</code>确认站点配置文件里有tag_dir: tags<br>,确认主题配置文件里有tags: /tags</li>
+<li>编辑站点的source/tags/index.md，添加<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2015-10-20 06:49:50</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>分类设置</strong></p>
+<ul>
+<li><code>$ hexo new page &quot; categories&quot;</code>确认站点配置文件里有category_dir: categories,<br>确认主题配置文件里有categories: /categories</li>
+<li>编辑站点的source/categories/index.md，添加<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2015-10-20 06:49:50</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="鼠标点击爱心效果"><a href="#鼠标点击爱心效果" class="headerlink" title="鼠标点击爱心效果"></a>鼠标点击爱心效果</h4><p>然后将里面的代码copy一下，新建love.js文件并且将代码复制进去，然后保存。将love.js文件放到路径/themes/next/source/js/src里面，然后打开\themes\next\layout_layout.swig文件,在末尾（在前面引用会出现找不到的bug）添加以下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面点击小红心 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/js/src/love.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params">e,t,a</span>)</span>&#123;<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>)</span>&#123;c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),o(),r()&#125;<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>)</span>&#123;<span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="number">0</span>;e&lt;d.length;e++)d[e].alpha&lt;=<span class="number">0</span>?(t.body.removeChild(d[e].el),d.splice(e,<span class="number">1</span>)):(d[e].y--,d[e].scale+=<span class="number">.004</span>,d[e].alpha-=<span class="number">.013</span>,d[e].el.style.cssText=<span class="string">"left:"</span>+d[e].x+<span class="string">"px;top:"</span>+d[e].y+<span class="string">"px;opacity:"</span>+d[e].alpha+<span class="string">";transform:scale("</span>+d[e].scale+<span class="string">","</span>+d[e].scale+<span class="string">") rotate(45deg);background:"</span>+d[e].color+<span class="string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> t=<span class="string">"function"</span>==<span class="keyword">typeof</span> e.onclick&amp;&amp;e.onclick;e.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"div"</span>);a.className=<span class="string">"heart"</span>,d.push(&#123;<span class="attr">el</span>:a,<span class="attr">x</span>:e.clientX<span class="number">-5</span>,<span class="attr">y</span>:e.clientY<span class="number">-5</span>,<span class="attr">scale</span>:<span class="number">1</span>,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:s()&#125;),t.body.appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;<span class="keyword">try</span>&#123;a.appendChild(t.createTextNode(e))&#125;<span class="keyword">catch</span>(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span><span class="string">"rgb("</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">","</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">")"</span>&#125;<span class="keyword">var</span> d=[];e.requestAnimationFrame=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;setTimeout(e,<span class="number">1e3</span>/<span class="number">60</span>)&#125;&#125;(),n()&#125;(<span class="built_in">window</span>,<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="修改文章内链接样式"><a href="#修改文章内链接样式" class="headerlink" title="修改文章内链接样式"></a>修改文章内链接样式</h4><p>修改文件 themes\next\source\css_common\components\post\post.styl ，在末尾添加如下css样式，<br>love.js代码如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 文章内链接文本样式</span><br><span class="line"><span class="selector-class">.post-body</span>  <span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0593d3</span>;</span><br><span class="line"> </span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-id">#fc6423</span>;</span><br><span class="line">   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="修改文章底部-号标签"><a href="#修改文章底部-号标签" class="headerlink" title="修改文章底部#号标签"></a>修改文章底部#号标签</h4><p>修改模板<br>/themes/next/layout/_macro/post.swig，搜索 rel=”tag”&gt;#，将 # 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
+<h4 id="修改文章结束语"><a href="#修改文章结束语" class="headerlink" title="修改文章结束语"></a>修改文章结束语</h4><p>在路径 \themes\next\layout_macro 中新建 passage-end-tag.swig 文件,并添加以下内容：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;color: #ccc;font-size:14px;"</span>&gt;</span></span><br><span class="line">            -------------本文结束</span><br><span class="line">            <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-child"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">            感谢您的阅读-------------</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>接着打开\themes\next\layout_macro\post.swig文件，在post-body 之后， post-footer之前添加如下画红色部分代码（post-footer之前两个DIV）：如下大概在344行左右的位置：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include 'passage-end-tag.swig' %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>然后打开主题配置文件_config.yml,在末尾添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
+<h4 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在需置顶的文章Front-matter中添加 <code>top:true</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo+github+coding搭建博客及备份</span><br><span class="line">date: 2017-3-10 22:06:20</span><br><span class="line">tags: [Hexo,hexo-theme-next,git,nodejs,coding,github,域名]</span><br><span class="line">categories: [博客]</span><br><span class="line">top: true </span><br><span class="line">keywords: [Hexo,hexo-theme-next,git,nodejs,coding,github,域名,hexo备份]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置置顶标志<ul>
+<li>打开：<code>/blog/themes/next/layout/_macro</code> 目录下的<code>post.swig</code>文件，定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code>标签下，插入如下代码：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">           &lt;i class=&quot;fa fa-thumb-tack&quot;&gt;&lt;/i&gt;</span><br><span class="line">           &lt;font color=7D26CD&gt;置顶&lt;/font&gt;</span><br><span class="line">           &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;</span><br><span class="line">         &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="隐藏底部强力驱动"><a href="#隐藏底部强力驱动" class="headerlink" title="隐藏底部强力驱动"></a>隐藏底部强力驱动</h4><p>打开themes/next/layout/_partials/footer.swig,使用”<!-- -->”隐藏之间的代码即可，或者直接删除。<br><img src="/images/hexo/hidden.jpg" alt="hidden"></p>
+<h4 id="修改网页底部的桃心"><a href="#修改网页底部的桃心" class="headerlink" title="修改网页底部的桃心"></a>修改网页底部的桃心</h4><p>还是打开themes/next/layout/_partials/footer.swig，找到：<br><img src="/images/hexo/icon.png" alt="icon">,然后还是在<a href="http://fontawesome.io/icons/" target="_blank" rel="noopener">图标库</a>中找到你自己喜欢的图标</p>
+<h4 id="第三方服务集成"><a href="#第三方服务集成" class="headerlink" title="第三方服务集成"></a>第三方服务集成</h4><ul>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html#comment-system" target="_blank" rel="noopener">评论系统</a></li>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html#analytics-system" target="_blank" rel="noopener">数据统计与分析</a></li>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html#share-system" target="_blank" rel="noopener">内容分析服务</a></li>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html#search-system" target="_blank" rel="noopener">搜索服务</a></li>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html#others" target="_blank" rel="noopener">其他服务</a></li>
+</ul>
+<h3 id="部署到github-page-和coding-page及备份"><a href="#部署到github-page-和coding-page及备份" class="headerlink" title="部署到github page 和coding page及备份"></a>部署到github page 和coding page及备份</h3><h4 id="部署到github-page"><a href="#部署到github-page" class="headerlink" title="部署到github page"></a>部署到github page</h4><ul>
+<li>在github上新建仓库username.github.io</li>
+<li><p>翻到最后为了部署到github修改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">type: git</span><br><span class="line">repo:git@github.com:username/username.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>npm install hexo-deployer-git --save</code>安装部署插件</p>
+</li>
+<li>执行<code>hexo g -d</code>生成静态网页部署至Github上。</li>
+<li>访问地址：username.github.io</li>
+</ul>
+<h4 id="部署到coding-page"><a href="#部署到coding-page" class="headerlink" title="部署到coding page"></a>部署到coding page</h4><ul>
+<li>若同时部署到<a href="https://coding.net/" target="_blank" rel="noopener">coding</a>,需新建coding项目最好取名同用户名,这样可直接访问username.coding.me，还要同git一样配置SSH，并打开coding page 服务，部署分支为master分支，修改站点的配置文件_config.yml为：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:username/usernae.github.io.git,master</span><br><span class="line">    coding: git@git.coding.net:username/username.git,master</span><br></pre></td></tr></table></figure>
+<p>并在本地source文件夹中添加一个文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="built_in">source</span>/</span><br><span class="line">touch Staticfile  <span class="comment">#名字必须是Staticfile</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>npm install hexo-deployer-git --save</code>安装部署插件</li>
+<li>执行<code>hexo g -d</code>生成静态网页部署至Github上。</li>
+<li>访问地址：username.coding.me,加载页面会有coding欢迎页面</li>
+</ul>
+<h4 id="去除coding欢迎页面-广告"><a href="#去除coding欢迎页面-广告" class="headerlink" title="去除coding欢迎页面/广告"></a>去除coding欢迎页面/广告</h4><ul>
+<li>升级银牌会员，完善资料</li>
+<li>修改themes/next/layout/_partialsfooter.swig:在<code>&lt;div class=&quot;theme-info&quot;&gt;</code>下新增<code>&lt;span&gt;Hosted by &lt;a href=&quot;https://pages.coding.me&quot; style=&quot;font-weight: bold&quot;&gt;Coding Pages&lt;/a&gt;&lt;/span&gt;</code></li>
+<li>hexo g -d部署到coding,在pages 服务项勾选 已放置 Hosted by Coding Pages，审核通过就可以了。</li>
+</ul>
+<h4 id="将hexo源文件备份到github"><a href="#将hexo源文件备份到github" class="headerlink" title="将hexo源文件备份到github"></a>将hexo源文件备份到github</h4><ul>
+<li>在源文件夹下 鼠标右键 打开git bash,</li>
+<li><code>git clone git@github.com:username/username.github.io.git</code>,克隆下来的文件只保存<code>.git</code>文件夹，.git在源文件夹下。</li>
+<li>对于换电脑从github仓库clone下来的或从旧电脑拷贝的博客源文件需将<code>themes/next/</code>和<code>source/_posts/</code>(我用的是NexT主题)中的<code>.git/</code>删除，否则无法将主题文件夹和资源文件夹push；</li>
+<li>github两个分支：master和hexo分别保存静态网页和源文件。新建hexo分支并切换分支<code>git checkout -b hexo</code></li>
+<li>执行<code>git add .</code>、<code>git commit -m &quot;&quot;</code>、-<br><code>git push origin hexo</code>来提交hexo网站源文件(<code>_config.yml</code>，<code>themes/</code>，<code>source/</code>，<code>scaffolds/</code>，<code>package.json</code>，<code>.gitignore</code>)；</li>
+</ul>
+<h4 id="将hexo源文件备份到coding"><a href="#将hexo源文件备份到coding" class="headerlink" title="将hexo源文件备份到coding"></a>将hexo源文件备份到coding</h4><ul>
+<li>同github,<code>git@e.coding.net:user/user.git</code></li>
+<li><code>git checkout -b hexo</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit -m &quot;&quot;</code></li>
+<li><code>git push origin hexo</code></li>
+</ul>
+<h3 id="购买域名及绑定域名"><a href="#购买域名及绑定域名" class="headerlink" title="购买域名及绑定域名"></a>购买域名及绑定域名</h3><ul>
+<li>阿里云购买域名，若在DNSpod解析，需修改DNS服务器</li>
+<li>DNSpod解析，具体搜索教程</li>
+</ul>
+<blockquote>
+<p>相关链接：<br><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>下载及<a href="https://yuhaha.github.io/2017/04/15/git/" target="_blank" rel="noopener">教程</a><br><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a><br><a href="http://fontawesome.io/icons/" target="_blank" rel="noopener">icons</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用中文</a><br><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">Next下载</a><br><a href="https://segmentfault.com/a/1190000009544924" target="_blank" rel="noopener">Next主题个性化配置</a><br><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a><br><a href="https://www.cnblogs.com/tengj/p/5352572.html" target="_blank" rel="noopener">hexo部署github和coding及绑定域名</a><br><a href="https://www.jianshu.com/p/7d3d87b52ad7" target="_blank" rel="noopener">Hexo博客提交百度和Google收录</a></p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 博客 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> hexo-theme-next </tag>
+            
+            <tag> nodejs </tag>
+            
+            <tag> coding </tag>
+            
+            <tag> github </tag>
+            
+            <tag> 域名 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
